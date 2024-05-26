@@ -769,8 +769,5 @@ $(window).scroll(function() {
 // only heaeder fixed js end
 
 // more-details start
-$('#more-details').on('click', function() {
-    $('#nav-user-link').slideToggle();
-});
+
 // more-details end
-$("body").append('<div class="fixed-button active"><a href="https://1.envato.market/PgJNQ" target="_blank" class="btn btn-md btn-primary"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Upgrade To Pro</a> </div>');
