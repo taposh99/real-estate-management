@@ -108,11 +108,20 @@ class AuthController extends Controller
      *
      * @return response()
      */
-    public function logout(): RedirectResponse
-    {
-        Session::flush();
-        Auth::logout();
+    // public function logout(): RedirectResponse
+    // {
+    //     Session::flush();
+    //     Auth::logout();
   
-        return Redirect('login');
+    //     return Redirect('login');
+    // }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('admin');
     }
 }
