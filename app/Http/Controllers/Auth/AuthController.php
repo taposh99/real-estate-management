@@ -10,7 +10,8 @@ use App\Models\User;
 use Hash;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
-  
+use Illuminate\Support\Facades\Hash as FacadesHash;
+
 class AuthController extends Controller
 {
     /**
@@ -85,7 +86,7 @@ class AuthController extends Controller
             return view('dashboard');
         }
   
-        return redirect("login")->withSuccess('Opps! You do not have access');
+        return redirect("admin")->withSuccess('Opps! You do not have access');
     }
     
     /**
