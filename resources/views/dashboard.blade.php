@@ -183,22 +183,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Widget primary-success card end -->
-
-            <!-- prject ,team member start -->
          
-           
-            <!-- prject ,team member start -->
-            <!-- seo start -->
-         
-      
-          
-            <!-- seo end -->
-
-            <!-- Latest Customers start -->
-          
-            
-            <!-- Latest Customers end -->
         </div>
         <!-- [ Main Content ] end -->
     </div>
