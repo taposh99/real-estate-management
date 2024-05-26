@@ -46,7 +46,7 @@
 
 <!-- [ Main Content ] start -->
 <main>
-    @yield('content')
+@yield('content')
 </main>
 
 
