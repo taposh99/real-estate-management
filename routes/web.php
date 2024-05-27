@@ -32,7 +32,9 @@ Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.pos
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
-
+/**
+ * property type 
+ */
 Route::get('/property-types', [PropertyTypeController::class, 'index'])->name('property.types.index');
 Route::post('/property-types', [PropertyTypeController::class, 'store'])->name('property.types.store');
 Route::get('/property-types/edit/{id}', [PropertyTypeController::class, 'edit'])->name('property.types.edit');

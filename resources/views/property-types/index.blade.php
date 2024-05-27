@@ -18,12 +18,12 @@
 
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5>Add Property Type</h5>
+                            <h5>Property Type</h5>
                             <!-- Search box -->
                             <input type="text" id="searchBox" class="form-control w-25" placeholder="Search...">
                             <!-- Button to open modal -->
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#categoryModal">
-                                Add Property Type
+                                 Property Type
                             </button>
                         </div>
                         <div class="card-body table-border-style">
