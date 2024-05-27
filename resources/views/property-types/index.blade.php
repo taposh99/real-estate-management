@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
+
 <body class="">
 
     <section class="pcoded-main-container">
@@ -37,8 +38,9 @@
                                     </thead>
                                     <tbody>
                                         @forelse ($propertyTypes as $key => $data)
+                                        
                                         <tr class="bg-primary">
-                                            <td>{{ $key + 1 }}</td>
+                                        <td>{{ $propertyTypes->firstItem() + $key }}</td>
                                             <td>{{ $data->name }}</td>
                                             <td class="d-flex">
                                                 <a class="btn btn-primary me-1" href="{{ route('property.types.edit', encrypt($data->id)) }}" style="font-size: 13px; width: 40px; display: inline-block; text-align: center;">
@@ -63,6 +65,9 @@
 
                                 </table>
 
+                                {!! $propertyTypes->withQueryString()->links('pagination::bootstrap-5') !!}
+
+
                             </div>
                         </div>
                     </div>
@@ -84,7 +89,7 @@
 
                 <div class="modal-body">
 
-                  
+
 
                     <form id="categoryForm" action="{{ route('property.types.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
@@ -110,7 +115,7 @@
         </div>
     </div>
 
- 
+
 
     </div>
     <!-- Bootstrap JS and dependencies (Popper.js) -->
