@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\PropertyTypeController;
 use Illuminate\Support\Facades\Route;
 
@@ -44,17 +46,17 @@ Route::delete('/property-types/delete', [PropertyTypeController::class, 'destroy
 /**
  * manage city 
  */
-Route::get('/city', [PropertyTypeController::class, 'index'])->name('city.index');
-Route::post('/city', [PropertyTypeController::class, 'store'])->name('city.store');
-Route::get('/city/edit/{id}', [PropertyTypeController::class, 'edit'])->name('city.edit');
-Route::post('/city/update', [PropertyTypeController::class, 'update'])->name('city.update');
-Route::delete('/city/delete', [PropertyTypeController::class, 'destroy'])->name('city.delete');
+Route::get('/city', [CityController::class, 'index'])->name('city.index');
+Route::post('/city', [CityController::class, 'store'])->name('city.store');
+Route::get('/city/edit/{id}', [CityController::class, 'edit'])->name('city.edit');
+Route::post('/city/update', [CityController::class, 'update'])->name('city.update');
+Route::delete('/city/delete', [CityController::class, 'destroy'])->name('city.delete');
 
 /**
  * location 
  */
-Route::get('/location', [PropertyTypeController::class, 'index'])->name('location.index');
-Route::post('/location', [PropertyTypeController::class, 'store'])->name('location.store');
-Route::get('/location/edit/{id}', [PropertyTypeController::class, 'edit'])->name('location.edit');
-Route::post('/location/update', [PropertyTypeController::class, 'update'])->name('location.update');
-Route::delete('/location/delete', [PropertyTypeController::class, 'destroy'])->name('location.delete');
+Route::get('/location', [LocationController::class, 'index'])->name('location.index');
+Route::post('/location', [LocationController::class, 'store'])->name('location.store');
+Route::get('/location/edit/{id}', [LocationController::class, 'edit'])->name('location.edit');
+Route::post('/location/update', [LocationController::class, 'update'])->name('location.update');
+Route::delete('/location/delete', [LocationController::class, 'destroy'])->name('location.delete');

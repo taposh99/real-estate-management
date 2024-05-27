@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class RequestCity extends FormRequest
 {
@@ -11,7 +12,7 @@ class RequestCity extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +23,17 @@ class RequestCity extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => [
+                'required',
+                Rule::unique('cities')->ignore($this->city_id),
+            ],
+        ];
+    }
+    
+    public function messages()
+    {
+        return [
+            'name.unique' => 'This ' . $this->name . ' has already been taken.',
         ];
     }
 }

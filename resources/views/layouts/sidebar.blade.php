@@ -18,7 +18,7 @@
 					<a href="{{route('dashboard')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
 				</li>
 				<li class="nav-item">
-					<a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Manage City</span></a>
+					<a href="{{route('city.index')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Manage City</span></a>
 					
 				</li>
 				<li class="nav-item">
