@@ -31,23 +31,36 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Username</th>
+                                            <th>Property Type</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @forelse ($propertyTypes as $key => $data)
                                         <tr class="bg-primary">
-                                            <td>1</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $data->name }}</td>
+                                            <td class="d-flex">
+                                                <a class="btn btn-primary me-1" href="{{ route('property.types.edit', encrypt($data->id)) }}" style="font-size: 13px; width: 40px; display: inline-block; text-align: center;">
+                                                    <i class="fa fa-edit" aria-hidden="true"></i>
+                                                </a>
+                                                <form action="{{ route('property.types.delete') }}" method="POST" onsubmit="return confirm('Are you sure?')" style="display: inline-block; width: 40px; text-align: center;">
+                                                    @method('DELETE')
+                                                    @csrf
+                                                    <input type="hidden" name="corporate_delete_id" value="{{ $data->id }}">
+                                                    <button class="btn btn-danger btn-sm" style="width: 40px;">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
                                         </tr>
-
-
-
-
+                                        @empty
+                                        <tr>
+                                            <td colspan="3">No property types found.</td>
+                                        </tr>
+                                        @endforelse
                                     </tbody>
+
                                 </table>
 
                             </div>
@@ -74,17 +87,17 @@
                     <form id="categoryForm" action="{{ route('property.types.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
-                        <div class="message">
-                                    @if ($errors->any())
-                                        <div class="alert alert-danger">
-                                            <ul>
-                                                @foreach ($errors->all() as $error)
-                                                    <li>{{ $error }}</li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                    @endif
+                            <div class="message">
+                                @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
                                 </div>
+                                @endif
+                            </div>
                             <label class="form-label">Property Type</label>
                             <input type="text" class="form-control" name="name" id="categoryName" required>
                         </div>

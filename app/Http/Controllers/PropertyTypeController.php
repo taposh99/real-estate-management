@@ -11,8 +11,8 @@ class PropertyTypeController extends Controller
 {
     public function index()
     {
-        // $propertyTypes = PropertyType::all();
-        return view('property-types.index');
+        $propertyTypes = PropertyType::all();
+        return view('property-types.index',compact('propertyTypes'));
     }
 
 
@@ -29,5 +29,12 @@ class PropertyTypeController extends Controller
         }
         return redirect()->back();
     }
-    
+
+
+public function destroy(Request $request)
+{
+    PropertyType::destroy($request->corporate_delete_id);
+
+    return back()->with('success', 'Deleted successfully');
+}
 }
