@@ -11,7 +11,7 @@ class PropertyTypeController extends Controller
 {
     public function index()
     {
-        $propertyTypes = PropertyType::all();
+        $propertyTypes = PropertyType::latest()->get();
         return view('property-types.index',compact('propertyTypes'));
     }
 
@@ -30,7 +30,25 @@ class PropertyTypeController extends Controller
         return redirect()->back();
     }
 
+    public function edit($id)
+    {
+        $editPropertyTypeValues = PropertyType::findOrFail(decrypt($id));
+        return view('property-types.edit', compact('editPropertyTypeValues'));
+    }
 
+
+    public function update(RequestPropertyType $request)
+    {
+        $valueUpdate = PropertyType::find($request->property_id);
+
+        $updateData = [
+            'name' => $request->name,
+        ];
+
+        $valueUpdate->update($updateData);
+
+        return back()->with('success', 'Update successfully');
+    }
 public function destroy(Request $request)
 {
     PropertyType::destroy($request->corporate_delete_id);

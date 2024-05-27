@@ -84,6 +84,8 @@
 
                 <div class="modal-body">
 
+                  
+
                     <form id="categoryForm" action="{{ route('property.types.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
@@ -108,6 +110,9 @@
         </div>
     </div>
 
+ 
+
+    </div>
     <!-- Bootstrap JS and dependencies (Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
@@ -129,9 +134,6 @@
 
         });
     </script>
-
-
-
 </body>
 
 @endsection

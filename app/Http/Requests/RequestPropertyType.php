@@ -26,12 +26,11 @@ class RequestPropertyType extends FormRequest
         return [
             'name' => [
                 'required',
-                Rule::unique('property_types')->where(function ($query) {
-                    return $query->where('name', $this->name);
-                }),
+                Rule::unique('property_types')->ignore($this->property_id),
             ],
         ];
     }
+    
     public function messages()
     {
         return [

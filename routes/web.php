@@ -35,6 +35,6 @@ Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/property-types', [PropertyTypeController::class, 'index'])->name('property.types.index');
 Route::post('/property-types', [PropertyTypeController::class, 'store'])->name('property.types.store');
-
 Route::get('/property-types/edit/{id}', [PropertyTypeController::class, 'edit'])->name('property.types.edit');
+Route::post('/property-types/update', [PropertyTypeController::class, 'update'])->name('property.types.update');
 Route::delete('/property-types/delete', [PropertyTypeController::class, 'destroy'])->name('property.types.delete');
