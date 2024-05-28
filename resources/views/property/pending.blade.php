@@ -19,10 +19,7 @@
                                 <!-- Search box -->
                                 <input type="text" id="searchBox" class="form-control w-25" placeholder="Search...">
                                 <!-- Button to open modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#propertyModal">
-                                    Add Property
-                                </button>
+                              
                             </div>
                             <div class="card-body table-border-style">
                                 <div class="table-responsive">

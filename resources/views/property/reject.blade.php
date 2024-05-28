@@ -19,9 +19,7 @@
                             <!-- Search box -->
                             <input type="text" id="searchBox" class="form-control w-25" placeholder="Search...">
                             <!-- Button to open modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#propertyModal">
-                            Add Property 
-                            </button>
+                            
                         </div>
                         <div class="card-body table-border-style">
                             <div class="table-responsive">
@@ -31,6 +29,9 @@
                                             <th>#</th>
                                             <th>Title</th>
                                             <th>City</th>
+                                            <th>Location</th>
+                                            <th>Property Purpose</th>
+                                            <th>Image</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
@@ -41,6 +42,16 @@
                                         <td>{{ $rejectPropertyValues->firstItem() + $key }}</td>
                                             <td>{{ $data->title }}</td>
                                             <td>{{ $data->city->name }}</td>
+                                            <td>{{ $data->location->name }}</td>
+                                            <td>{{ $data->property_purpose }}</td>
+                                            <td>
+                                                @if ($data->image)
+                                                    <img src="{{ asset($data->image) }}" alt="image"
+                                                        style="width: 90px; height: 50px;">
+                                                @else
+                                                    No Image
+                                                @endif
+                                            </td>
                                             <td>{{ $data->status == 0 ? 'Pending' : ($data->status == 1 ? 'Approved' : 'Rejected') }}</td>
                                             
                                            

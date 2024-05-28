@@ -31,6 +31,9 @@
                                             <th>#</th>
                                             <th>Name</th>
                                             <th>City</th>
+                                            <th>Location</th>
+                                            <th>Property Purpose</th>
+                                            <th>Image</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -40,6 +43,16 @@
                                             <td>{{ $property->id }}</td>
                                             <td>{{ $property->title }}</td>
                                             <td>{{ $property->city->name }}</td>
+                                            <td>{{ $property->location->name }}</td>
+                                            <td>{{ $property->property_purpose }}</td>
+                                            <td>
+                                                @if ($property->image)
+                                                    <img src="{{ asset($property->image) }}" alt="image"
+                                                        style="width: 90px; height: 50px;">
+                                                @else
+                                                    No Image
+                                                @endif
+                                            </td>
                                             <td class="d-flex">
                                                 <a class="btn btn-primary me-1" href="{{ route('property.edit', encrypt($property->id)) }}" style="font-size: 13px; width: 40px; display: inline-block; text-align: center;">
                                                     <i class="fa fa-edit" aria-hidden="true"></i>
