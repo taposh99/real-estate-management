@@ -10,8 +10,14 @@ class City extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+    
     public function location(): HasMany
     {
         return $this->hasMany(Location::class);
+    }
+
+    public function property(): HasMany
+    {
+        return $this->hasMany(Property::class);
     }
 }

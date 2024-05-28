@@ -42,7 +42,7 @@
                                         <tr class="bg-primary">
                                         <td>{{ $allLocation->firstItem() + $key }}</td>
                                             <td>{{ $data->name }}</td>
-                                            <td>{{ $data->location->name }}</td>
+                                            <td>{{ $data->city->name }}</td>
                                             <td class="d-flex">
                                                 <a class="btn btn-primary me-1" href="{{ route('location.edit', encrypt($data->id)) }}" style="font-size: 13px; width: 40px; display: inline-block; text-align: center;">
                                                     <i class="fa fa-edit" aria-hidden="true"></i>

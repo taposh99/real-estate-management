@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\PropertyTypeController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,3 +57,16 @@ Route::post('/location', [LocationController::class, 'store'])->name('location.s
 Route::get('/location/edit/{id}', [LocationController::class, 'edit'])->name('location.edit');
 Route::post('/location/update', [LocationController::class, 'update'])->name('location.update');
 Route::delete('/location/delete', [LocationController::class, 'destroy'])->name('location.delete');
+
+/**
+ * Manage Property 
+ */
+Route::get('/manage-property', [PropertyController::class, 'index'])->name('property.index');
+Route::get('/property-pending', [PropertyController::class, 'PropertyPendingindex'])->name('property.pending');
+Route::get('/property-reject', [PropertyController::class, 'PropertyRejectindex'])->name('property.reject');
+Route::post('/properties/{id}/status', [PropertyController::class, 'updateStatus'])->name('properties.updateStatus');
+
+Route::post('/property-store', [PropertyController::class, 'store'])->name('property.store');
+Route::get('/property/edit/{id}', [PropertyController::class, 'edit'])->name('property.edit');
+// Route::post('/location/update', [LocationController::class, 'update'])->name('location.update');
+Route::delete('/property/delete', [PropertyController::class, 'destroy'])->name('property.delete');

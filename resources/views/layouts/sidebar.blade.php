@@ -32,7 +32,9 @@
 				<li class="nav-item pcoded-hasmenu">
 					<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Manage Property</span></a>
 					<ul class="pcoded-submenu">
-						<li><a href="#">All</a></li>
+						<li><a href="{{route('property.index')}}">All Property</a></li>
+						<li><a href="{{route('property.pending')}}">Pending</a></li>
+						<li><a href="{{route('property.reject')}}">Reject</a></li>
 					</ul>
 				</li>
 
