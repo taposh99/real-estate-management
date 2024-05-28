@@ -23,10 +23,6 @@ Route::get('/', function () {
     return view('forntEndLayout.forntEndDashboard');
 });
 
-
-
-
-
 Route::get('admin', [AuthController::class, 'index'])->name('login');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
 // Route::get('registration', [AuthController::class, 'registration'])->name('register');
