@@ -18,15 +18,15 @@
 					<a href="{{route('dashboard')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
 				</li>
 				<li class="nav-item">
-					<a href="{{route('city.index')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Manage City</span></a>
+					<a href="{{route('city.index')}}" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa-mountain-city"></i></span><span class="pcoded-mtext">Manage City</span></a>
 					
 				</li>
 				<li class="nav-item">
-					<a href="{{route('location.index')}}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Manage Location</span></a>
+					<a href="{{route('location.index')}}" class="nav-link"><span class="pcoded-micon"><i class="fa-solid fa-location-crosshairs"></i></span><span class="pcoded-mtext">Manage Location</span></a>
 					
 				</li>
 				<li class="nav-item">
-					<a href="{{route('property.types.index')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Property Type</span></a>
+					<a href="{{route('property.types.index')}}" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa-house"></i></span><span class="pcoded-mtext">Property Type</span></a>
 					
 				</li>
 				<li class="nav-item pcoded-hasmenu">
@@ -39,12 +39,12 @@
 				</li>
 
 				<li class="nav-item">
-					<a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Advertisement</span></a>
+					<a href="#" class="nav-link "><span class="pcoded-micon"><i class="fa-brands fa-slack"></i></span><span class="pcoded-mtext">Advertisement</span></a>
 					
 				</li>
 
 				<li class="nav-item pcoded-hasmenu">
-					<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">User Management</span></a>
+					<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa-user"></i></span><span class="pcoded-mtext">User Management</span></a>
 					<ul class="pcoded-submenu">
 						<li><a href="#">List Role</a></li>
 						<li><a href="#">Create Role</a></li>
