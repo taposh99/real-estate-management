@@ -26,7 +26,7 @@
 <!-- [ auth-signin ] start -->
 <div class="auth-wrapper">
 	<div class="auth-content text-center">
-		<img src="{{asset('adminAsset')}}/assets/images/logo.png" alt="" class="img-fluid mb-4">
+		<img src="{{asset('adminAsset')}}/assets/images/logo111.png" alt="" class="img-fluid mb-4">
 		<div class="card borderless">
 			<div class="row align-items-center ">
 				<div class="col-md-12">
