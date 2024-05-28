@@ -50,7 +50,7 @@
                                                 <form action="{{ route('location.delete') }}" method="POST" onsubmit="return confirm('Are you sure?')" style="display: inline-block; width: 40px; text-align: center;">
                                                     @method('DELETE')
                                                     @csrf
-                                                    <input type="hidden" name="allLocation_delete_id" value="{{ $data->id }}">
+                                                    <input type="hidden" name="Location_delete_id" value="{{ $data->id }}">
                                                     <button class="btn btn-danger btn-sm" style="width: 40px;">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
@@ -103,8 +103,8 @@
                                 </div>
                                 @endif
                             </div>
-                            <label class="form-label">Name</label>
-                            <input type="text" class="form-control" name="name" id="categoryName" required placeholder="Dhaka">
+                            <label class="form-label">Location Name</label>
+                            <input type="text" class="form-control" name="name" id="categoryName" required placeholder="Dhanmondhi 27">
 
                             <label class="form-label">City</label>
                             <select class="form-control" name="city_id">

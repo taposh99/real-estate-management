@@ -53,7 +53,7 @@ Route::delete('/city/delete', [CityController::class, 'destroy'])->name('city.de
  * location 
  */
 Route::get('/location', [LocationController::class, 'index'])->name('location.index');
-Route::post('/location', [LocationController::class, 'store'])->name('location.store');
+Route::post('/location-store', [LocationController::class, 'store'])->name('location.store');
 Route::get('/location/edit/{id}', [LocationController::class, 'edit'])->name('location.edit');
 Route::post('/location/update', [LocationController::class, 'update'])->name('location.update');
 Route::delete('/location/delete', [LocationController::class, 'destroy'])->name('location.delete');
@@ -68,5 +68,5 @@ Route::post('/properties/{id}/status', [PropertyController::class, 'updateStatus
 
 Route::post('/property-store', [PropertyController::class, 'store'])->name('property.store');
 Route::get('/property/edit/{id}', [PropertyController::class, 'edit'])->name('property.edit');
-// Route::post('/location/update', [LocationController::class, 'update'])->name('location.update');
+Route::post('/property/update', [PropertyController::class, 'update'])->name('property.update');
 Route::delete('/property/delete', [PropertyController::class, 'destroy'])->name('property.delete');

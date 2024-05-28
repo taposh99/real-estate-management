@@ -29,4 +29,30 @@ class CityController extends Controller
         return redirect()->back();
     }
 
+    public function edit($id)
+    {
+        $editCityValues = City::findOrFail(decrypt($id));
+        return view('city.edit', compact('editCityValues'));
+    }
+
+
+    public function update(RequestCity $request)
+    {
+        $valueUpdate = City::find($request->city_id);
+
+        $updateData = [
+            'name' => $request->name,
+        ];
+
+        $valueUpdate->update($updateData);
+
+        return back()->with('success', 'Update successfully');
+    }
+public function destroy(Request $request)
+{
+    City::destroy($request->city_delete_id);
+
+    return back()->with('success', 'Deleted successfully');
+}
+
 }

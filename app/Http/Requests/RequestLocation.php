@@ -26,7 +26,7 @@ class RequestLocation extends FormRequest
             
             'name' => [
                 'required',
-                Rule::unique('locations')->ignore($this->property_id),
+                Rule::unique('locations')->ignore($this->location_id),
             ],
         ];
     }

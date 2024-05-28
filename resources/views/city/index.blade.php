@@ -43,13 +43,13 @@
                                         <td>{{ $allCities->firstItem() + $key }}</td>
                                             <td>{{ $data->name }}</td>
                                             <td class="d-flex">
-                                                <a class="btn btn-primary me-1" href="{{ route('property.types.edit', encrypt($data->id)) }}" style="font-size: 13px; width: 40px; display: inline-block; text-align: center;">
+                                                <a class="btn btn-primary me-1" href="{{ route('city.edit', encrypt($data->id)) }}" style="font-size: 13px; width: 40px; display: inline-block; text-align: center;">
                                                     <i class="fa fa-edit" aria-hidden="true"></i>
                                                 </a>
-                                                <form action="{{ route('property.types.delete') }}" method="POST" onsubmit="return confirm('Are you sure?')" style="display: inline-block; width: 40px; text-align: center;">
+                                                <form action="{{ route('city.delete') }}" method="POST" onsubmit="return confirm('Are you sure?')" style="display: inline-block; width: 40px; text-align: center;">
                                                     @method('DELETE')
                                                     @csrf
-                                                    <input type="hidden" name="corporate_delete_id" value="{{ $data->id }}">
+                                                    <input type="hidden" name="city_delete_id" value="{{ $data->id }}">
                                                     <button class="btn btn-danger btn-sm" style="width: 40px;">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
