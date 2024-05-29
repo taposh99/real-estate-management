@@ -33,11 +33,7 @@ class LocationController extends Controller
         return redirect()->back();
     }
 
-    // public function edit($id)
-    // {
-    //     $editLocationValues = Location::findOrFail(decrypt($id));
-    //     return view('location.edit', compact('editLocationValues'));
-    // }
+  
 
     public function edit($id)
     {

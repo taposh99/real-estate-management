@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\ForntEnd\BannerController;
+use App\Http\Controllers\ForntEnd\ContactUsController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\PropertyTypeController;
@@ -70,3 +72,22 @@ Route::post('/property-store', [PropertyController::class, 'store'])->name('prop
 Route::get('/property/edit/{id}', [PropertyController::class, 'edit'])->name('property.edit');
 Route::post('/property/update', [PropertyController::class, 'update'])->name('property.update');
 Route::delete('/property/delete', [PropertyController::class, 'destroy'])->name('property.delete');
+
+
+/**
+ * ForntEnd Banner 
+ */
+Route::get('/banner', [BannerController::class, 'index'])->name('banner.index');
+Route::post('/banner-store', [BannerController::class, 'store'])->name('banner.store');
+Route::get('/banner/edit/{id}', [BannerController::class, 'edit'])->name('banner.edit');
+Route::post('/banner/update', [BannerController::class, 'update'])->name('banner.update');
+Route::delete('/banner/delete', [BannerController::class, 'destroy'])->name('banner.delete');
+
+/**
+ * ForntEnd Contact 
+ */
+Route::get('/contact', [ContactUsController::class, 'index'])->name('contact.index');
+Route::post('/contact-store', [ContactUsController::class, 'store'])->name('contact.store');
+Route::get('/contact/edit/{id}', [ContactUsController::class, 'edit'])->name('contact.edit');
+Route::post('/contact/update', [ContactUsController::class, 'update'])->name('contact.update');
+Route::delete('/contact/delete', [ContactUsController::class, 'destroy'])->name('contact.delete');
