@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\ForntEnd\BannerController;
 use App\Http\Controllers\ForntEnd\ContactUsController;
+use App\Http\Controllers\ForntEndDashboardController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\PropertyTypeController;
@@ -22,9 +23,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('forntEndLayout.forntEndDashboard');
-});
+
+Route::get('/', [ForntEndDashboardController::class, 'index']);
+
 
 Route::get('admin', [AuthController::class, 'index'])->name('login');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');

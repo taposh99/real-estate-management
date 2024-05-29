@@ -76,5 +76,12 @@ class ContactUsController extends Controller
             return redirect()->back();
         }
     }
+
+    public function destroy(Request $request)
+    {
+        ContactUs::destroy($request->contact_delete_id);
+
+        return back()->with('success', 'Deleted successfully');
+    }
     
 }
