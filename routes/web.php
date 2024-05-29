@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\ForntEnd\BannerController;
+use App\Http\Controllers\ForntEnd\ContactUsController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\PropertyTypeController;
@@ -81,3 +82,12 @@ Route::post('/banner-store', [BannerController::class, 'store'])->name('banner.s
 Route::get('/banner/edit/{id}', [BannerController::class, 'edit'])->name('banner.edit');
 Route::post('/banner/update', [BannerController::class, 'update'])->name('banner.update');
 Route::delete('/banner/delete', [BannerController::class, 'destroy'])->name('banner.delete');
+
+/**
+ * ForntEnd Contact 
+ */
+Route::get('/contact', [ContactUsController::class, 'index'])->name('contact.index');
+Route::post('/contact-store', [ContactUsController::class, 'store'])->name('contact.store');
+Route::get('/contact/edit/{id}', [ContactUsController::class, 'edit'])->name('contact.edit');
+Route::post('/contact/update', [ContactUsController::class, 'update'])->name('contact.update');
+Route::delete('/contact/delete', [ContactUsController::class, 'destroy'])->name('contact.delete');

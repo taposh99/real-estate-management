@@ -47,7 +47,7 @@
 					<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa-user"></i></span><span class="pcoded-mtext">Frontend Manager					</span></a>
 					<ul class="pcoded-submenu">
 						<li><a href="{{route('banner.index')}}">Banner</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="{{route('contact.index')}}">ContactUs</a></li>
 					</ul>
 				</li>
 

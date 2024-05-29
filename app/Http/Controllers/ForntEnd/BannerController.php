@@ -49,25 +49,7 @@ class BannerController extends Controller
 
         return view('ForntEndPage.banner.edit', compact('editBannerValues'));
     }
-    // public function update(Request $request)
-    // {
-    //     $request->validate([
-    //         'title' => 'required|string',
-    //         'image' => 'required|image',
-    //     ]);
-
-    //     try {
-    //         $location = Banner::findOrFail($request->location_id);
-    //         $location->update([
-    //             'title' => $request->title,
-    //             'image' => $request->image,
-    //         ]);
-
-    //         return back()->with('success', 'Update successfully');
-    //     } catch (Exception $exception) {
-    //         return back()->with('error', 'Something went wrong: ' . $exception->getMessage());
-    //     }
-    // }
+    
     public function update(Request $request)
     {
         // Validate incoming request
