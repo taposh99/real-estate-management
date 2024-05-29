@@ -79,5 +79,5 @@ Route::delete('/property/delete', [PropertyController::class, 'destroy'])->name(
 Route::get('/banner', [BannerController::class, 'index'])->name('banner.index');
 Route::post('/banner-store', [BannerController::class, 'store'])->name('banner.store');
 Route::get('/banner/edit/{id}', [BannerController::class, 'edit'])->name('banner.edit');
-// Route::post('/banner/update', [LocationController::class, 'update'])->name('banner.update');
+Route::post('/banner/update', [BannerController::class, 'update'])->name('banner.update');
 Route::delete('/banner/delete', [BannerController::class, 'destroy'])->name('banner.delete');

@@ -40,36 +40,35 @@
                                         </thead>
                                         <tbody>
                                             @forelse ($allBanner as $key => $data)
-                                            
-                                                    <td>{{ $allBanner->firstItem() + $key }}</td>
-                                                    <td>{{ $data->title }}</td>
-                                                    <td>
-                                                        @if ($data->image)
-                                                            <img src="{{ asset('images/banner/' . $data->image) }}" alt="image"
-                                                                style="width: 90px; height: 50px;">
-                                                        @else
-                                                            No Image
-                                                        @endif
-                                                    </td>
-                                                    <td class="d-flex">
-                                                        <a class="btn btn-primary me-1"
-                                                            href="{{ route('banner.edit', encrypt($data->id)) }}"
-                                                            style="font-size: 13px; width: 40px; display: inline-block; text-align: center;">
-                                                            <i class="fa fa-edit" aria-hidden="true"></i>
-                                                        </a>
-                                                        <form action="{{ route('banner.delete') }}" method="POST"
-                                                            onsubmit="return confirm('Are you sure?')"
-                                                            style="display: inline-block; width: 40px; text-align: center;">
-                                                            @method('DELETE')
-                                                            @csrf
-                                                            <input type="hidden" name="banner_delete_id"
-                                                                value="{{ $data->id }}">
-                                                            <button class="btn btn-danger btn-sm" style="width: 40px;">
-                                                                <i class="fas fa-trash"></i>
-                                                            </button>
-                                                        </form>
-                                                    </td>
-                                              
+                                                <td>{{ $allBanner->firstItem() + $key }}</td>
+                                                <td>{{ $data->title }}</td>
+                                                <td>
+                                                    @if ($data->image)
+                                                        <img src="{{ asset('images/banner/' . $data->image) }}"
+                                                            alt="image" style="width: 90px; height: 50px;">
+                                                    @else
+                                                        No Image
+                                                    @endif
+                                                </td>
+                                                <td class="d-flex">
+                                                    <a class="btn btn-primary me-1"
+                                                        href="{{ route('banner.edit', encrypt($data->id)) }}"
+                                                        style="font-size: 13px; width: 40px; display: inline-block; text-align: center;">
+                                                        <i class="fa fa-edit" aria-hidden="true"></i>
+                                                    </a>
+                                                    <form action="{{ route('banner.delete') }}" method="POST"
+                                                        onsubmit="return confirm('Are you sure?')"
+                                                        style="display: inline-block; width: 40px; text-align: center;">
+                                                        @method('DELETE')
+                                                        @csrf
+                                                        <input type="hidden" name="banner_delete_id"
+                                                            value="{{ $data->id }}">
+                                                        <button class="btn btn-danger btn-sm" style="width: 40px;">
+                                                            <i class="fas fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                </td>
+
                                             @empty
                                                 <tr>
                                                     <td colspan="3">No Location found.</td>
