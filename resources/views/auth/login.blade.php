@@ -18,9 +18,6 @@
 	<!-- vendor css -->
 	<link rel="stylesheet" href="{{asset('adminAsset')}}/assets/css/style.css">
 	
-	
-
-
 </head>
 
 <!-- [ auth-signin ] start -->
