@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\ForntEnd\BannerController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\PropertyTypeController;
@@ -70,3 +71,13 @@ Route::post('/property-store', [PropertyController::class, 'store'])->name('prop
 Route::get('/property/edit/{id}', [PropertyController::class, 'edit'])->name('property.edit');
 Route::post('/property/update', [PropertyController::class, 'update'])->name('property.update');
 Route::delete('/property/delete', [PropertyController::class, 'destroy'])->name('property.delete');
+
+
+/**
+ * ForntEnd Banner 
+ */
+Route::get('/banner', [BannerController::class, 'index'])->name('banner.index');
+Route::post('/banner-store', [BannerController::class, 'store'])->name('banner.store');
+Route::get('/banner/edit/{id}', [BannerController::class, 'edit'])->name('banner.edit');
+// Route::post('/banner/update', [LocationController::class, 'update'])->name('banner.update');
+Route::delete('/banner/delete', [BannerController::class, 'destroy'])->name('banner.delete');
