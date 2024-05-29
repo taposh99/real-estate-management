@@ -19,7 +19,7 @@
                                 <!-- Search box -->
                                 <input type="text" id="searchBox" class="form-control w-25" placeholder="Search...">
                                 <!-- Button to open modal -->
-                              
+
                             </div>
                             <div class="card-body table-border-style">
                                 <div class="table-responsive">
@@ -56,20 +56,20 @@
                                                     </td>
                                                     <td>
                                                         <form action="{{ route('properties.updateStatus', $data->id) }}"
-                                                            method="POST">
+                                                            method="POST" style="display: inline-block;">
                                                             @csrf
                                                             <input type="hidden" name="status" value="1">
-                                                            <button type="submit" class="btn btn-success">Approve</button>
+                                                            <button type="submit"
+                                                                class="btn btn-success btn-sm">Approve</button>
                                                         </form>
                                                         <form action="{{ route('properties.updateStatus', $data->id) }}"
-                                                            method="POST">
+                                                            method="POST" style="display: inline-block;">
                                                             @csrf
                                                             <input type="hidden" name="status" value="2">
-                                                            <button type="submit" class="btn btn-danger">Reject</button>
+                                                            <button type="submit"
+                                                                class="btn btn-danger btn-sm">Reject</button>
                                                         </form>
                                                     </td>
-
-
 
                                                 </tr>
                                             @empty

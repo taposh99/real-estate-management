@@ -20866,6 +20866,7 @@ pre[class*=language-]:before {
     padding: 7px 7px 7px 45px;
     margin: 0;
     display: block;
+	text-decoration: none;
 }
 
 .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > a:before {
