@@ -32,7 +32,7 @@
                             <i class="feather icon-star-on"></i>
                         </div>
                         <div class="col-sm-9">
-                            <h4>4000 +</h4>
+                            <h4><b>{{ $totalProperty ?? '0' }}</b></h4>
                             <h6>Total Property</h6>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                             <i class="feather icon-star-on"></i>
                         </div>
                         <div class="col-sm-9">
-                            <h4>4000 +</h4>
+                            <h4><b>{{ $totalPending ?? '0' }}</b></h4>
                             <h6>Total Pending Property</h6>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                             <i class="fas fa-trophy"></i>
                         </div>
                         <div class="col-sm-9">
-                            <h4>17</h4>
+                            <h4><b>{{ $totalApproved ?? '0' }}</b></h4>
                             <h6>Total Approved Property</h6>
                         </div>
                     </div>
@@ -89,8 +89,8 @@
                             <i class="feather icon-star-on"></i>
                         </div>
                         <div class="col-sm-9">
-                            <h4>4000 +</h4>
-                            <h6>Total Cancel Property</h6>
+                            <h4><b>{{ $totalReject ?? '0' }}</b></h4>
+                            <h6>Total Reject Property</h6>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                             <i class="feather icon-star-on"></i>
                         </div>
                         <div class="col-sm-9">
-                            <h4>4000 +</h4>
+                            <h4><b>{{ $totalPropertyType ?? '0' }}</b></h4>
                             <h6>Total Property Type</h6>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                             <i class="fas fa-trophy"></i>
                         </div>
                         <div class="col-sm-9">
-                            <h4>17</h4>
+                            <h4><b>{{ $totalCity ?? '0' }}</b></h4>
                             <h6>Total City</h6>
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                             <i class="feather icon-star-on"></i>
                         </div>
                         <div class="col-sm-9">
-                            <h4>4000 +</h4>
+                            <h4><b>{{ $totalLocation ?? '0' }}</b></h4>
                             <h6>Total Location</h6>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                             <i class="feather icon-star-on"></i>
                         </div>
                         <div class="col-sm-9">
-                            <h4>4000 +</h4>
+                            <h4><b>50 +</b></h4>
                             <h6>Total Advertisements</h6>
                         </div>
                     </div>
@@ -180,7 +180,7 @@
                             <i class="fas fa-trophy"></i>
                         </div>
                         <div class="col-sm-9">
-                            <h4>17</h4>
+                            <h4>100 +</h4>
                             <h6>Achievements</h6>
                         </div>
                     </div>

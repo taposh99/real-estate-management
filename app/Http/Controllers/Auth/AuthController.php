@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\City;
+use App\Models\Location;
+use App\Models\Property;
+use App\Models\PropertyType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Session;
@@ -81,9 +85,18 @@ class AuthController extends Controller
      */
     public function dashboard()
     {
+        $totalProperty = Property::all()->count();
+        $totalApproved = Property::where('status', 1)->count();
+        $totalPending = Property::where('status',0)->count();
+        $totalReject = Property::where('status',2)->count();
+        $totalPropertyType = PropertyType::all()->count();
+        $totalCity = City::all()->count();
+        $totalLocation = Location::all()->count();
+
+
         if(Auth::check()){
            
-            return view('dashboard');
+            return view('dashboard',compact('totalProperty','totalApproved','totalPending','totalReject','totalPropertyType','totalCity','totalLocation'));
         }
   
         return redirect("admin")->withSuccess('Opps! You do not have access');
