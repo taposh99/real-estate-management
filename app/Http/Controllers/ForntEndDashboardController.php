@@ -12,4 +12,7 @@ class ForntEndDashboardController extends Controller
     public function contactPage(){
         return view('frontend.contact.index');
     }
+    public function propertyPage(){
+        return view('frontend.property.index');
+    }
 }
