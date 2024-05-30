@@ -142,7 +142,7 @@
     <div class="main-content">
 
         <div class="content">
-            @yield('content')
+            @yield('body')
         </div>
     </div><!-- End #main -->
 
