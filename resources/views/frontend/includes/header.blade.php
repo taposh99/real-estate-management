@@ -25,8 +25,9 @@
                 <li class="nav-item">
                     <a class="nav-link " href="blog-grid.html">Blog</a>
                 </li>
+               
 
-                <li class="nav-item dropdown">
+                {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item " href="property-single.html">Property Single</a>
@@ -34,9 +35,13 @@
                         <a class="dropdown-item " href="agents-grid.html">Agents Grid</a>
                         <a class="dropdown-item " href="agent-single.html">Agent Single</a>
                     </div>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link " href="{{route('contact.page')}}">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="{{route('login')}}">Login</a>
                 </li>
             </ul>
         </div>
