@@ -27,7 +27,7 @@
 
                 <!-- widget primary card start -->
                 <div class="card flat-card widget-primary-card">
-                    <div class="row-table" style="background-color: #00005C;">
+                    <div class="row-table" style="background-color: #2C3E50;">
                         <div class="col-sm-3 card-body">
                             <i class="feather icon-star-on"></i>
                         </div>
@@ -43,7 +43,7 @@
 
                 <!-- widget primary card start -->
                 <div class="card flat-card widget-primary-card">
-                    <div class="row-table"style="background-color: #0779E4;">
+                    <div class="row-table"style="background-color: #48536C;">
                         <div class="col-sm-3 card-body">
                             <i class="feather icon-star-on"></i>
                         </div>
@@ -61,7 +61,7 @@
 
                 <!-- widget-success-card start -->
                 <div class="card flat-card widget-purple-card">
-                    <div class="row-table"style="background-color: #035AA6;">
+                    <div class="row-table"style="background-color: #6A6787;">
                         <div class="col-sm-3 card-body">
                             <i class="fas fa-trophy"></i>
                         </div>
@@ -84,7 +84,7 @@
 
                 <!-- widget primary card start -->
                 <div class="card flat-card widget-primary-card">
-                    <div class="row-table"style="background-color: #FF5200;">
+                    <div class="row-table"style="background-color: #917CA0;">
                         <div class="col-sm-3 card-body">
                             <i class="feather icon-star-on"></i>
                         </div>
@@ -100,7 +100,7 @@
 
                 <!-- widget primary card start -->
                 <div class="card flat-card widget-primary-card">
-                    <div class="row-table"style="background-color: #342EAD;">
+                    <div class="row-table"style="background-color: #BA90B4;">
                         <div class="col-sm-3 card-body">
                             <i class="feather icon-star-on"></i>
                         </div>
@@ -118,7 +118,7 @@
 
                 <!-- widget-success-card start -->
                 <div class="card flat-card widget-purple-card">
-                    <div class="row-table"style="background-color: #342EAD;">
+                    <div class="row-table"style="background-color: #E4A6C4;">
                         <div class="col-sm-3 card-body">
                             <i class="fas fa-trophy"></i>
                         </div>
@@ -141,7 +141,7 @@
 
                 <!-- widget primary card start -->
                 <div class="card flat-card widget-primary-card">
-                    <div class="row-table"style="background-color: #10375C;">
+                    <div class="row-table"style="background-color: #9FADBD;">
                         <div class="col-sm-3 card-body">
                             <i class="feather icon-star-on"></i>
                         </div>
@@ -157,7 +157,7 @@
 
                 <!-- widget primary card start -->
                 <div class="card flat-card widget-primary-card">
-                    <div class="row-table"style="background-color: #5C2A9D;">
+                    <div class="row-table"style="background-color: #9FADBD;">
                         <div class="col-sm-3 card-body">
                             <i class="feather icon-star-on"></i>
                         </div>
@@ -175,7 +175,7 @@
 
                 <!-- widget-success-card start -->
                 <div class="card flat-card widget-purple-card">
-                    <div class="row-table"style="background-color: #FF9234;">
+                    <div class="row-table"style="background-color: #E39E21;">
                         <div class="col-sm-3 card-body">
                             <i class="fas fa-trophy"></i>
                         </div>
