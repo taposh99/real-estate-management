@@ -19,7 +19,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link " href="property-grid.html">Property</a>
+                    <a class="nav-link " href="{{route('property.page')}}">Property</a>
                 </li>
 
                 <li class="nav-item">
