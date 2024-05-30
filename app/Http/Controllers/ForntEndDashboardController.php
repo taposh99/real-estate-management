@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class ForntEndDashboardController extends Controller
 {
     public function index(){
-        return view('forntEndLayout.app');
+       return view('frontend.home.index');
     }
     public function contactPage(){
-        return view('forntEndLayout.contact');
+        return view('frontend.contact.index');
     }
 }
