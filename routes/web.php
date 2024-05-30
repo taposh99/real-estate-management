@@ -24,19 +24,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [ForntEndDashboardController::class, 'index']);
+Route::get('/', [ForntEndDashboardController::class, 'index'])->name('home');
 Route::get('/contact-page', [ForntEndDashboardController::class, 'contactPage'])->name('contact.page');
 
 
 Route::get('admin', [AuthController::class, 'index'])->name('login');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
 // Route::get('registration', [AuthController::class, 'registration'])->name('register');
-// Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post'); 
+// Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
 /**
- * property type 
+ * property type
  */
 Route::get('/property-types', [PropertyTypeController::class, 'index'])->name('property.types.index');
 Route::post('/property-types', [PropertyTypeController::class, 'store'])->name('property.types.store');
@@ -45,7 +45,7 @@ Route::post('/property-types/update', [PropertyTypeController::class, 'update'])
 Route::delete('/property-types/delete', [PropertyTypeController::class, 'destroy'])->name('property.types.delete');
 
 /**
- * manage city 
+ * manage city
  */
 Route::get('/city', [CityController::class, 'index'])->name('city.index');
 Route::post('/city', [CityController::class, 'store'])->name('city.store');
@@ -54,7 +54,7 @@ Route::post('/city/update', [CityController::class, 'update'])->name('city.updat
 Route::delete('/city/delete', [CityController::class, 'destroy'])->name('city.delete');
 
 /**
- * location 
+ * location
  */
 Route::get('/location', [LocationController::class, 'index'])->name('location.index');
 Route::post('/location-store', [LocationController::class, 'store'])->name('location.store');
@@ -63,7 +63,7 @@ Route::post('/location/update', [LocationController::class, 'update'])->name('lo
 Route::delete('/location/delete', [LocationController::class, 'destroy'])->name('location.delete');
 
 /**
- * Manage Property 
+ * Manage Property
  */
 Route::get('/manage-property', [PropertyController::class, 'index'])->name('property.index');
 Route::get('/property-pending', [PropertyController::class, 'PropertyPendingindex'])->name('property.pending');
@@ -77,7 +77,7 @@ Route::delete('/property/delete', [PropertyController::class, 'destroy'])->name(
 
 
 /**
- * ForntEnd Banner 
+ * ForntEnd Banner
  */
 Route::get('/banner', [BannerController::class, 'index'])->name('banner.index');
 Route::post('/banner-store', [BannerController::class, 'store'])->name('banner.store');
@@ -86,7 +86,7 @@ Route::post('/banner/update', [BannerController::class, 'update'])->name('banner
 Route::delete('/banner/delete', [BannerController::class, 'destroy'])->name('banner.delete');
 
 /**
- * ForntEnd Contact 
+ * ForntEnd Contact
  */
 Route::get('/contact', [ContactUsController::class, 'index'])->name('contact.index');
 Route::post('/contact-store', [ContactUsController::class, 'store'])->name('contact.store');
