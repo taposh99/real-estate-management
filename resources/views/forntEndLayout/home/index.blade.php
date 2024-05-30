@@ -1,5 +1,5 @@
 @extends('forntEndLayout.app')
-@Section('content')
+@Section('body')
 <div class="intro intro-carousel swiper position-relative">
 
     <div class="swiper-wrapper">
