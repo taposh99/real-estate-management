@@ -2,17 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use Illuminate\Http\Request;
 
 class ForntEndDashboardController extends Controller
 {
-    public function index(){
-       return view('frontend.home.index');
+    public function index()
+    {
+        $allBanner = Banner::latest()->get();
+        return view('frontend.home.index', compact('allBanner'));
     }
-    public function contactPage(){
+    public function contactPage()
+    {
         return view('frontend.contact.index');
     }
-    public function propertyPage(){
+    public function propertyPage()
+    {
         return view('frontend.property.index');
     }
 }
