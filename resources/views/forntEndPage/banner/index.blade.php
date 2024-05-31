@@ -40,7 +40,8 @@
                                         </thead>
                                         <tbody>
                                             @forelse ($allBanner as $key => $data)
-                                                <td>{{ $allBanner->firstItem() + $key }}</td>
+                                            <tr>
+                                             <td>{{ $allBanner->firstItem() + $key }}</td>
                                                 <td>{{ $data->title }}</td>
                                                 <td>
                                                     @if ($data->image)
