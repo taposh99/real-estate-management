@@ -2,92 +2,46 @@
 
 @section('body')
     <div class="intro intro-carousel swiper position-relative">
-
         <div class="swiper-wrapper">
-
-            <div class="swiper-slide carousel-item-a intro-item bg-image"
-                style="background-image: url({{ asset('/') }}frontend/assets/img/slide-1.jpg)">
-                <div class="overlay overlay-a"></div>
-                <div class="intro-content display-table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <div class="intro-body">
-
-                                        <h1 class="intro-title mb-4 ">
-                                            <span class="color-b"></span> Luxury 
-                                            <br> in every corner
-                                        </h1>
-                                        <p class="intro-subtitle intro-price">
-                                            <a href="#"> <span class="price-a"
-                                                    style="background-color: #ff9900; padding: 10px 20px; color: #ffffff; border-radius: 5px; transition: background-color 0.3s;">Read
-                                                    More</span>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
+        @forelse ($allBanner as $data)
+        @php
+        $titleWords = explode(' ', $data->title, 2);
+        $firstWord = $titleWords[0];
+        $remainingWords = isset($titleWords[1]) ? $titleWords[1] : '';
+    @endphp
+    <div class="swiper-slide carousel-item-a intro-item bg-image"
+         style="background-image: url({{ asset('images/banner/' . $data->image) }})">
+        <div class="overlay overlay-a"></div>
+        <div class="intro-content display-table">
+            <div class="table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="intro-body">
+                                <h1 class="intro-title mb-4">
+                                <span class="color-b">{{ $firstWord }}</span>
+                                    <br> {{ $remainingWords }}
+                                    
+                                </h1>
+                                <p class="intro-subtitle intro-price">
+                                    <a href="#">
+                                        <span class="price-a" style="background-color: #ff9900; padding: 10px 20px; color: #ffffff; border-radius: 5px; transition: background-color 0.3s;">
+                                            Read More
+                                        </span>
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide carousel-item-a intro-item bg-image"
-                style="background-image: url({{ asset('/') }}frontend/assets/img/slide-2.jpg)">
-                <div class="overlay overlay-a"></div>
-                <div class="intro-content display-table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <div class="intro-body">
+        </div>
+    </div>
+@empty
+    <p>No Banners found.</p>
+@endforelse
 
-                                        <h1 class="intro-title mb-4">
-                                            <span class="color-b"></span> Invest 
-                                            <br> in premier living
-                                        </h1>
-                                        <p class="intro-subtitle intro-price">
-                                            <a href="#"> <span class="price-a"
-                                                    style="background-color: #ff9900; padding: 10px 20px; color: #ffffff; border-radius: 5px; transition: background-color 0.3s;">Read
-                                                    More</span>
-                                            </a>
-                                        </p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide carousel-item-a intro-item bg-image"
-                style="background-image: url({{ asset('/') }}frontend/assets/img/slide-3.jpg)">
-                <div class="overlay overlay-a"></div>
-                <div class="intro-content display-table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <div class="intro-body">
-
-                                        <h1 class="intro-title mb-4">
-                                            <span class="color-b"></span> Dreams 
-                                            <br> await, embrace luxury
-                                        </h1>
-                                        <p class="intro-subtitle intro-price">
-                                            <a href="#"> <span class="price-a"
-                                                    style="background-color: #ff9900; padding: 10px 20px; color: #ffffff; border-radius: 5px; transition: background-color 0.3s;">Read
-                                                    More</span>
-                                            </a>
-                                        </p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
         </div>
         <div class="swiper-pagination"></div>
     </div>
