@@ -27,6 +27,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ForntEndDashboardController::class, 'index'])->name('home');
 Route::get('/contact-page', [ForntEndDashboardController::class, 'contactPage'])->name('contact.page');
 Route::get('/property-page', [ForntEndDashboardController::class, 'propertyPage'])->name('property.page');
+Route::get('/property-page2', [ForntEndDashboardController::class, 'propertyPageSingle'])->name('property.single');
 
 
 Route::get('admin', [AuthController::class, 'index'])->name('login');

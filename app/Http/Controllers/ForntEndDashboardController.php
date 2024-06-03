@@ -16,6 +16,14 @@ class ForntEndDashboardController extends Controller
 
         return view('frontend.home.index', compact('allBanner','properties'));
     }
+    public function propertyPageSingle()
+{
+    // Retrieve the property by its ID
+    $property = Property::where('status', 1)->firstOrFail();
+
+    return view('frontend.property.singleProperty', compact('property'));
+}
+
     public function contactPage()
     {
         return view('frontend.contact.index');
