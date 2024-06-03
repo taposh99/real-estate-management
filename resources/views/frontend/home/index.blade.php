@@ -21,7 +21,7 @@
                                 <h1 class="intro-title mb-4">
                                 <span class="color-b">{{ $firstWord }}</span>
                                     <br> {{ $remainingWords }}
-                                    
+
                                 </h1>
                                 <p class="intro-subtitle intro-price">
                                     <a href="#">
@@ -41,7 +41,7 @@
     <p>No Banners found.</p>
 @endforelse
 
-        
+
         </div>
         <div class="swiper-pagination"></div>
     </div>
@@ -158,16 +158,16 @@
                         </div>
                     </div>
                 </div>
-        
+
                 <div id="property-carousel" class="swiper">
                     <div class="swiper-wrapper">
                         @forelse ($properties as $data)
                         <div class="carousel-item-b swiper-slide">
                             <div class="card-box-a card-shadow">
                                 <div class="img-box-a">
-                                    <img src="{{ asset('images/property/' . $data->image) }}" alt="" class="img-a img-fluid">
+                                    <img src="{{ asset( $data->image) }}" alt="" class="img-a img-fluid">
                                 </div>
-                                
+
                                 <div class="card-overlay">
                                     <div class="card-overlay-a-content">
                                         <div class="card-header-a">
