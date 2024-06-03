@@ -178,9 +178,10 @@
                                             <div class="price-box d-flex">
                                                 <span class="price-a">rent | $ 12.000</span>
                                             </div>
-                                            <a href="{{route('property.single')}}" class="link-a">Click here to view
+                                            <a href="{{ route('property.single', ['id' => $property->id]) }}" class="link-a">Click here to view
                                                 <span class="bi bi-chevron-right"></span>
                                             </a>
+                                            
                                         </div>
                                         <div class="card-footer-a">
                                             <ul class="card-info d-flex justify-content-around">
