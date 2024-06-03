@@ -47,8 +47,6 @@
     </div>
 
     <main id="main">
-
-
         <!-- ======= Services Section ======= -->
         <section class="section-services section-t8">
             <div class="container">
@@ -158,16 +156,16 @@
                         </div>
                     </div>
                 </div>
-
+        
                 <div id="property-carousel" class="swiper">
                     <div class="swiper-wrapper">
                         @forelse ($properties as $data)
                         <div class="carousel-item-b swiper-slide">
                             <div class="card-box-a card-shadow">
-                                <div class="img-box-a">
-                                    <img src="{{ asset( $data->image) }}" alt="" class="img-a img-fluid">
+                                <div class="img-box-a" style="height: 400px; overflow: hidden;">
+                                    <img src="{{ asset($data->image) }}" alt="" class="img-a img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
                                 </div>
-
+        
                                 <div class="card-overlay">
                                     <div class="card-overlay-a-content">
                                         <div class="card-header-a">
@@ -180,9 +178,10 @@
                                             <div class="price-box d-flex">
                                                 <span class="price-a">rent | $ 12.000</span>
                                             </div>
-                                            <a href="#" class="link-a">Click here to view
+                                            <a href="{{ route('property.single', ['id' => $property->id]) }}" class="link-a">Click here to view
                                                 <span class="bi bi-chevron-right"></span>
                                             </a>
+                                            
                                         </div>
                                         <div class="card-footer-a">
                                             <ul class="card-info d-flex justify-content-around">
@@ -213,9 +212,10 @@
                         @endforelse
                     </div>
                 </div>
-                <div class="propery-carousel-pagination carousel-pagination"></div>
+                <div class="property-carousel-pagination carousel-pagination"></div>
             </div>
         </section>
+        
         <!-- End Latest Properties Section -->
 
         <!-- ======= Agents Section ======= -->
