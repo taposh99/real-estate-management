@@ -23,7 +23,7 @@
 <!-- [ auth-signin ] start -->
 <div class="auth-wrapper">
 	<div class="auth-content text-center">
-		<img src="{{asset('adminAsset')}}/assets/images/logo111.png" alt="" class="img-fluid mb-4">
+		{{-- <img src="{{asset('adminAsset')}}/assets/images/logo111.png" alt="" class="img-fluid mb-4"> --}}
 		<div class="card borderless">
 			<div class="row align-items-center ">
 				<div class="col-md-12">
@@ -49,8 +49,8 @@
 						<button class="btn btn-block btn-primary mb-4">Signin</button>
                         </form>
 						<hr>
-						<p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html" class="f-w-400">Reset</a></p>
-						<p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html" class="f-w-400">Signup</a></p>
+						{{-- <p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html" class="f-w-400">Reset</a></p>
+						<p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html" class="f-w-400">Signup</a></p> --}}
 					</div>
 				</div>
 			</div>
