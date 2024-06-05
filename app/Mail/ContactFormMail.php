@@ -42,10 +42,8 @@ class ContactFormMail extends Mailable
                 'subject' => $this->contact->subject,
                       
                 'email' => $this->contact->email,
-                'message' => $this->contact->message,
+                'contactMessage' => $this->contact->message,
             ]);
-
-       
 
         return $mail;
     }
