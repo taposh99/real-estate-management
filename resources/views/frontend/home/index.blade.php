@@ -67,22 +67,23 @@
                                     <span class="bi bi-cart"></span>
                                 </div>
                                 <div class="card-title-c align-self-center">
-                                    <h2 class="title-c">Lifestyle</h2>
+                                    <h5 class="title-c"style="
+                                    font-size: 27px;">Apartment Sales
+
+                                    </h5>
                                 </div>
                             </div>
                             <div class="card-body-c">
                                 <p class="content-c">
-                                    Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien
-                                    massa,
-                                    convallis a pellentesque
-                                    nec, egestas non nisi.
+                                    Specializing in the sale of high-quality apartments, we offer a diverse range of options from luxury penthouses to affordable studio apartments, ensuring there's something to suit every taste and budget.
+
                                 </p>
                             </div>
-                            <div class="card-footer-c">
+                            {{-- <div class="card-footer-c">
                                 <a href="#" class="link-c link-icon">Read more
                                     <span class="bi bi-chevron-right"></span>
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -92,22 +93,21 @@
                                     <span class="bi bi-calendar4-week"></span>
                                 </div>
                                 <div class="card-title-c align-self-center">
-                                    <h2 class="title-c">Loans</h2>
+                                    <h5 class="title-c" style="
+                                    font-size: 27px;">Land Sales</h5>
                                 </div>
                             </div>
                             <div class="card-body-c">
                                 <p class="content-c">
-                                    Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit.
-                                    Mauris blandit
-                                    aliquet elit, eget tincidunt
-                                    nibh pulvinar a.
+                                    Offering plots of land in prime locations, ideal for residential or commercial development. Our expert team provides comprehensive support throughout the buying process, from selecting the right site to navigating zoning laws.
+
                                 </p>
                             </div>
-                            <div class="card-footer-c">
+                            {{-- <div class="card-footer-c">
                                 <a href="#" class="link-c link-icon">Read more
                                     <span class="bi bi-calendar4-week"></span>
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -117,22 +117,20 @@
                                     <span class="bi bi-card-checklist"></span>
                                 </div>
                                 <div class="card-title-c align-self-center">
-                                    <h2 class="title-c">Sell</h2>
+                                    <h5 class="title-c"style="
+                                    font-size: 27px;">Commercial Real Estate</h5>
                                 </div>
                             </div>
                             <div class="card-body-c">
                                 <p class="content-c">
-                                    Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien
-                                    massa,
-                                    convallis a pellentesque
-                                    nec, egestas non nisi.
+                                    Focused on the sale and lease of commercial properties including office spaces, retail locations, and industrial sites. We provide tailored solutions that align with your business needs and growth strategies.
                                 </p>
                             </div>
-                            <div class="card-footer-c">
+                            {{-- <div class="card-footer-c">
                                 <a href="#" class="link-c link-icon">Read more
                                     <span class="bi bi-chevron-right"></span>
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
