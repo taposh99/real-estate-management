@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Pathway Gothic One
+Author: Eduardo Tunni
+Url: https://fonts.google.com/specimen/Pathway+Gothic+One
+
+Font: Montserrat
+Author: Julieta Ulanovsky,Sol Matas,Juan Pablo del Peral,Jacques Le Bailly
+Url: https://fonts.google.com/specimen/Montserrat
