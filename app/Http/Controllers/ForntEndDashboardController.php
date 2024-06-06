@@ -24,13 +24,29 @@ class ForntEndDashboardController extends Controller
     }
     
     
-
     public function contactPage()
     {
         return view('frontend.contact.index');
     }
-    public function propertyPage()
+
+    public function propertyPage(Request $request)
     {
-        return view('frontend.property.index');
+        $query = Property::where('status', 1);
+
+        if ($request->has('filter')) {
+            $filter = $request->input('filter');
+            if ($filter == 'sale') {
+                $query->where('property_purpose', 'For sale');
+            } elseif ($filter == 'rent') {
+                $query->where('property_purpose', 'For rent');
+            } elseif ($filter == 'new_to_old') {
+                $query->orderBy('created_at', 'desc');
+            }
+        }
+    
+        $properties = $query->latest()->get();
+        return view('frontend.property.index', compact('properties'));
+
     }
+   
 }
