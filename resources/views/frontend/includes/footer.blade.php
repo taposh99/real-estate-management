@@ -4,21 +4,20 @@
             <div class="col-sm-12 col-md-4">
                 <div class="widget-a">
                     <div class="w-header-a">
-                        <h3 class="w-title-a text-brand">EstateAgency</h3>
+                        <h3 class="w-title-a text-brand">RealEstate</h3>
                     </div>
                     <div class="w-body-a">
-                        <p class="w-text-a color-text-a">
-                            Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat duis
-                            sed aute irure.
+                        <p class="w-text-a color-text-a"  style="text-align: justify;">
+                            We are a premier real estate firm specializing in residential, commercial, and land sales, offering comprehensive services tailored to meet the diverse needs of our clients. With a focus on professionalism, integrity, and personalized service, we strive to exceed expectations and deliver exceptional results in every transaction.
                         </p>
                     </div>
                     <div class="w-footer-a">
                         <ul class="list-unstyled">
                             <li class="color-a">
-                                <span class="color-text-a">Phone .</span> contact@example.com
+                                <span class="color-text-a">Phone .</span> +880 1934838499 
                             </li>
                             <li class="color-a">
-                                <span class="color-text-a">Email .</span> +54 356 945234
+                                <span class="color-text-a">Email .</span> saniatulhaque@gmail.com
                             </li>
                         </ul>
                     </div>
@@ -94,19 +93,19 @@
                 <nav class="nav-footer">
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href="#">Home</a>
+                            <a href="{{route('home')}}">Home</a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#">About</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#">Property</a>
+                            <a href="{{route('property.page')}}">Property</a>
                         </li>
-                        <li class="list-inline-item">
+                        {{-- <li class="list-inline-item">
                             <a href="#">Blog</a>
-                        </li>
+                        </li> --}}
                         <li class="list-inline-item">
-                            <a href="#">Contact</a>
+                            <a href="{{route('contact.page')}}">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -137,11 +136,11 @@
                 <div class="copyright-footer">
                     <p class="copyright color-text-a">
                         &copy; Copyright
-                        <span class="color-a">EstateAgency</span> All Rights Reserved.
+                        <span class="color-a">RealEstate</span> All Rights Reserved.
                     </p>
                 </div>
                 <div class="credits">
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    Designed by <a href="https://saniatulhaque.com/">Sani</a>
                 </div>
             </div>
         </div>

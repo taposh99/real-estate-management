@@ -123,7 +123,7 @@
                                     Profile</a></li>
                             <li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i> My
                                     Messages</a></li>
-                            <li><a href="{{ route('login') }}" class="dropdown-item"><i
+                            <li><a href="{{ route('logout') }}" class="dropdown-item"><i
                                         class="feather icon-lock"></i> Lock Screen</a></li>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                 style="display: none;">
