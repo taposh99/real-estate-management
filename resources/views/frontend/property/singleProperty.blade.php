@@ -3,67 +3,66 @@
 @section('body')
 <main id="main">
 
-    <!-- ======= Intro Single ======= -->
-    <section class="intro-single">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-8">
-            <div class="title-single-box">
-              <h1 class="title-single">304 Blaster Up</h1>
-              <span class="color-text-a">Chicago, IL 606543</span>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-4">
-            <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="index.html">Home</a>
-                </li>
-                <li class="breadcrumb-item">
-                  <a href="property-grid.html">Properties</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  304 Blaster Up
-                </li>
-              </ol>
-            </nav>
+  <!-- ======= Intro Single ======= -->
+  <section class="intro-single" style="margin-top: -99px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-8">
+          <div class="title-single-box">
+            <h5 class="title-single" style="font-size: 1.875em;">Property ID:</h5>
+            <span class="color-text-a"><b>{{ $property->code }}</b></span>
+
           </div>
         </div>
+        <div class="col-md-12 col-lg-4">
+          <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{{route('home')}}">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="{{route('property.page')}}">Properties</a>
+              </li>
+
+            </ol>
+          </nav>
+        </div>
       </div>
-    </section>
-<section class="property-single nav-arrow-b">
+    </div>
+  </section>
+  <section class="property-single nav-arrow-b">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div id="property-single-carousel" class="swiper">
-            <div class="swiper-wrapper">
-              <div class="carousel-item-b swiper-slide">
-                <img src="{{asset('/')}}frontend/assets/img/slide-1.jpg" alt="">
-              </div>
-              <div class="carousel-item-b swiper-slide">
-                <img src="{{asset('/')}}frontend/assets/img/slide-2.jpg" alt="">
-              </div>
+            <div class="carousel-item-b swiper-slide" style="height: 572px; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+              <img src="{{ asset($property->image) }}" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
             </div>
           </div>
-          <div class="property-single-carousel-pagination carousel-pagination"></div>
         </div>
       </div>
+
+
+
+      <br>
 
       <div class="row">
         <div class="col-sm-12">
 
           <div class="row justify-content-between">
             <div class="col-md-5 col-lg-4">
-              <div class="property-price d-flex justify-content-center foo">
+              <div class="property-price d-flex justify-content-center foo" style="box-shadow: 0 4px 8px rgba(0, 128, 0, 0.3); padding: 2px; border-radius: 33px;">
                 <div class="card-header-c d-flex">
                   <div class="card-box-ico">
-                    <span class="bi bi-cash">$</span>
+                    <span class="bi bi-cash"> {{ $property->price ? $property->price . ' TK' : 'Price Hidden' }}</span>
                   </div>
                   <div class="card-title-c align-self-center">
                     <h5 class="title-c"></h5>
                   </div>
                 </div>
               </div>
+
+
               <div class="property-summary">
                 <div class="row">
                   <div class="col-sm-12">
@@ -74,45 +73,91 @@
                 </div>
                 <div class="summary-list">
                   <ul class="list">
+
+
+                    @if($property->title)
                     <li class="d-flex justify-content-between">
-                      <strong>Property ID:</strong>
-                      <span>1134</span>
+                      <strong>Property Title:</strong>
+                      <span>{{ $property->title }}</span>
                     </li>
+                    @endif
+
+                    @if($property->city->name)
+                    <li class="d-flex justify-content-between">
+                      <strong>City:</strong>
+                      <span>{{ $property->city->name }}</span>
+                    </li>
+                    @endif
+
+                    @if($property->location->name)
                     <li class="d-flex justify-content-between">
                       <strong>Location:</strong>
-                      <span>{{ $property->owner_phone }}</span>
+                      <span>{{ $property->location->name }}</span>
                     </li>
+                    @endif
+
+                    @if($property->propertyType->name)
                     <li class="d-flex justify-content-between">
                       <strong>Property Type:</strong>
-                      <span>House</span>
+                      <span>{{ $property->propertyType->name }}</span>
                     </li>
+                    @endif
+
+                    @if($property->property_purpose)
                     <li class="d-flex justify-content-between">
-                      <strong>Status:</strong>
-                      <span>Sale</span>
+                      <strong>Purpose:</strong>
+                      <span>{{ $property->property_purpose }}</span>
                     </li>
+                    @endif
+
+                    @if($property->land_area)
                     <li class="d-flex justify-content-between">
                       <strong>Area:</strong>
-                      <span>340m
-                        <sup>2</sup>
-                      </span>
+                      <span>{{ $property->land_area }}</span>
                     </li>
+                    @endif
+
+                    @if($property->appartment_size)
+                    <li class="d-flex justify-content-between">
+                      <strong>Appartment Size:</strong>
+                      <span>{{ $property->appartment_size }}</span>
+                    </li>
+                    @endif
+
+                    @if($property->bed_room)
                     <li class="d-flex justify-content-between">
                       <strong>Beds:</strong>
-                      <span>4</span>
+                      <span>{{ $property->bed_room }}</span>
                     </li>
+                    @endif
+
+                    @if($property->bath_room)
                     <li class="d-flex justify-content-between">
                       <strong>Baths:</strong>
-                      <span>2</span>
+                      <span>{{ $property->bath_room }}</span>
                     </li>
+                    @endif
+
+                    @if($property->drawing_room)
+                    <li class="d-flex justify-content-between">
+                      <strong>Drawing Room:</strong>
+                      <span>{{ $property->drawing_room }}</span>
+                    </li>
+                    @endif
+
+                    @if($property->garage)
                     <li class="d-flex justify-content-between">
                       <strong>Garage:</strong>
-                      <span>1</span>
+                      <span>{{ $property->garage }}</span>
                     </li>
+                    @endif
                   </ul>
+
                 </div>
               </div>
             </div>
             <div class="col-md-7 col-lg-7 section-md-t3">
+              @if ($property->description)
               <div class="row">
                 <div class="col-sm-12">
                   <div class="title-box-d">
@@ -122,18 +167,11 @@
               </div>
               <div class="property-description">
                 <p class="description color-text-a">
-                  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
-                  neque, auctor sit amet
-                  aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta.
-                  Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt
-                  nibh pulvinar quam id dui posuere blandit.
+                  {{ $property->description }}
                 </p>
-                <p class="description color-text-a no-margin">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget
-                  malesuada. Quisque velit nisi,
-                  pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.
-                </p>
+
               </div>
+              @endif
               <div class="row section-t3">
                 <div class="col-sm-12">
                   <div class="title-box-d">
@@ -157,30 +195,35 @@
             </div>
           </div>
         </div>
+        @if ($property->video_link)
         <div class="col-md-10 offset-md-1">
           <ul class="nav nav-pills-a nav-pills mb-3 section-t3" id="pills-tab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" id="pills-video-tab" data-bs-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="true">Video</a>
+              <a class="nav-link active" id="pills-video-tab" data-bs-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="true">Properties Video</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-plans-tab" data-bs-toggle="pill" href="#pills-plans" role="tab" aria-controls="pills-plans" aria-selected="false">Floor Plans</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-map-tab" data-bs-toggle="pill" href="#pills-map" role="tab" aria-controls="pills-map" aria-selected="false">Ubication</a>
-            </li>
+
           </ul>
+          @php
+          // Assuming $property->video_link is in the standard YouTube URL format
+          // Convert it to embed format if necessary
+          $video_link = $property->video_link;
+          if (strpos($video_link, 'watch?v=') !== false) {
+          $video_link = str_replace('watch?v=', 'embed/', $video_link);
+          }
+          @endphp
+
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
-              <iframe src="https://player.vimeo.com/video/73221098" width="100%" height="460" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-            <div class="tab-pane fade" id="pills-plans" role="tabpanel" aria-labelledby="pills-plans-tab">
-              <img src="assets/img/plan2.jpg" alt="" class="img-fluid">
-            </div>
-            <div class="tab-pane fade" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1ses-419!2sve!4v1510329142834" width="100%" height="460" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <iframe id="video-iframe" src="{{ $video_link }}" width="100%" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
           </div>
+
+
+
+
+
         </div>
+        @endif
         <div class="col-md-12">
           <div class="row section-t3">
             <div class="col-sm-12">
@@ -190,29 +233,24 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6 col-lg-4">
-              <img src="assets/img/agent-4.jpg" alt="" class="img-fluid">
-            </div>
+
             <div class="col-md-6 col-lg-4">
               <div class="property-agent">
-                <h4 class="title-agent">Anabella Geller</h4>
-                <p class="color-text-a">
-                  Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
-                  dui. Quisque velit nisi,
-                  pretium ut lacinia in, elementum id enim.
-                </p>
+                <h4 class="title-agent">Real EState</h4>
+
                 <ul class="list-unstyled">
-                  <li class="d-flex justify-content-between">
-                    <strong>Phone:</strong>
-                    <span class="color-text-a">(222) 4568932</span>
-                  </li>
+
                   <li class="d-flex justify-content-between">
                     <strong>Mobile:</strong>
-                    <span class="color-text-a">777 287 378 737</span>
+                    <span class="color-text-a">(+880) 1934838499</span>
                   </li>
                   <li class="d-flex justify-content-between">
                     <strong>Email:</strong>
-                    <span class="color-text-a">annabella@example.com</span>
+                    <span class="color-text-a">saniatulhaque@gmail.com</span>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <strong>Address:</strong>
+                    <span class="color-text-a">Dhanmondhi 27</span>
                   </li>
                   <li class="d-flex justify-content-between">
                     <strong>Skype:</strong>
@@ -245,7 +283,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-12 col-lg-4">
+            <!-- <div class="col-md-12 col-lg-4">
               <div class="property-contact">
                 <form class="form-a">
                   <div class="row">
@@ -270,12 +308,20 @@
                   </div>
                 </form>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
     </div>
   </section>
 </main>
-
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const videoLink = "{{ $property->video_link }}";
+    document.getElementById('pills-youtube-tab').addEventListener('click', function() {
+      const iframe = document.getElementById('video-iframe');
+      iframe.src = videoLink;
+    });
+  });
+</script>
 @endsection
