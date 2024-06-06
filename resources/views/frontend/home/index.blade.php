@@ -54,88 +54,92 @@
                     <div class="col-md-12">
                         <div class="title-wrap d-flex justify-content-between">
                             <div class="title-box">
-                                <h2 class="title-a">Our Services</h2>
+                                <h2 class="title-a" style="font-size: 36px; font-weight: bold; text-align: center; margin-bottom: 30px;">Our Services</h2>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card-box-c foo">
+                        <div class="card-box-c foo" style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                             <div class="card-header-c d-flex">
-                                <div class="card-box-ico">
+                                <div class="card-box-ico" style="font-size: 30px; margin-right: 10px;">
                                     <span class="bi bi-cart"></span>
                                 </div>
                                 <div class="card-title-c align-self-center">
-                                    <h5 class="title-c"style="
-                                    font-size: 27px;">Apartment Sales
-
-                                    </h5>
+                                    <h5 class="title-c" style="font-size: 21px; font-weight: bold;">Apartment Sales</h5>
                                 </div>
                             </div>
-                            <div class="card-body-c">
-                                <p class="content-c">
-                                    Specializing in the sale of high-quality apartments, we offer a diverse range of options from luxury penthouses to affordable studio apartments, ensuring there's something to suit every taste and budget.
-
-                                </p>
-                            </div>
-                            {{-- <div class="card-footer-c">
-                                <a href="#" class="link-c link-icon">Read more
-                                    <span class="bi bi-chevron-right"></span>
-                                </a>
-                            </div> --}}
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card-box-c foo">
+                        <div class="card-box-c foo" style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                             <div class="card-header-c d-flex">
-                                <div class="card-box-ico">
+                                <div class="card-box-ico" style="font-size: 30px; margin-right: 10px;">
                                     <span class="bi bi-calendar4-week"></span>
                                 </div>
                                 <div class="card-title-c align-self-center">
-                                    <h5 class="title-c" style="
-                                    font-size: 27px;">Land Sales</h5>
+                                    <h5 class="title-c" style="font-size: 21px; font-weight: bold;">Land Sales</h5>
                                 </div>
                             </div>
-                            <div class="card-body-c">
-                                <p class="content-c">
-                                    Offering plots of land in prime locations, ideal for residential or commercial development. Our expert team provides comprehensive support throughout the buying process, from selecting the right site to navigating zoning laws.
-
-                                </p>
-                            </div>
-                            {{-- <div class="card-footer-c">
-                                <a href="#" class="link-c link-icon">Read more
-                                    <span class="bi bi-calendar4-week"></span>
-                                </a>
-                            </div> --}}
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card-box-c foo">
+                        <div class="card-box-c foo" style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                             <div class="card-header-c d-flex">
-                                <div class="card-box-ico">
+                                <div class="card-box-ico" style="font-size: 30px; margin-right: 10px;">
                                     <span class="bi bi-card-checklist"></span>
                                 </div>
                                 <div class="card-title-c align-self-center">
-                                    <h5 class="title-c"style="
-                                    font-size: 27px;">Commercial Real Estate</h5>
+                                    <h5 class="title-c" style="font-size: 21px; font-weight: bold;">Commercial Real Estate</h5>
                                 </div>
                             </div>
-                            <div class="card-body-c">
-                                <p class="content-c">
-                                    Focused on the sale and lease of commercial properties including office spaces, retail locations, and industrial sites. We provide tailored solutions that align with your business needs and growth strategies.
-                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-md-4">
+                        <div class="card-box-c foo" style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                            <div class="card-header-c d-flex">
+                                <div class="card-box-ico" style="font-size: 30px; margin-right: 10px;">
+                                    <span class="bi bi-cart"></span>
+                                </div>
+                                <div class="card-title-c align-self-center">
+                                    <h5 class="title-c" style="font-size: 21px; font-weight: bold;">Real Estate Auctions</h5>
+                                </div>
                             </div>
-                            {{-- <div class="card-footer-c">
-                                <a href="#" class="link-c link-icon">Read more
-                                    <span class="bi bi-chevron-right"></span>
-                                </a>
-                            </div> --}}
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-box-c foo" style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                            <div class="card-header-c d-flex">
+                                <div class="card-box-ico" style="font-size: 30px; margin-right: 10px;">
+                                    <span class="bi bi-calendar4-week"></span>
+                                </div>
+                                <div class="card-title-c align-self-center">
+                                    <h5 class="title-c" style="font-size: 21px; font-weight: bold;">Property Tax Consulting</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-box-c foo" style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                            <div class="card-header-c d-flex">
+                                <div class="card-box-ico" style="font-size: 30px; margin-right: 10px;">
+                                    <span class="bi bi-card-checklist"></span>
+                                </div>
+                                <div class="card-title-c align-self-center">
+                                    <h5 class="title-c" style="font-size: 21px; font-weight: bold;">Real Estate Legal Services</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section><!-- End Services Section -->
+        </section>
+        
+     
+        <!-- End Services Section -->
 
         <!-- ======= Latest Properties Section ======= -->
         <section class="section-property section-t8">
@@ -349,4 +353,15 @@
         <!-- ======= Testimonials Section ======= -->
        <!-- End Testimonials Section -->
     </main><!-- End #main -->
+
+    <script>
+        document.querySelectorAll('.card-box-c').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.05)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+    </script>
 @endsection
