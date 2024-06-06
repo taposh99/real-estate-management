@@ -106,7 +106,7 @@
                                 @endif
                             </div>
                             <label class="form-label">Property Type</label>
-                            <input type="text" class="form-control" name="name" id="categoryName" required>
+                            <input type="text" class="form-control" name="name" id="categoryName" placeholder="Factory" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Save</button>
                     </form>

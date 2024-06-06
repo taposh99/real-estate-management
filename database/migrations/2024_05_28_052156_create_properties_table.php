@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('bath_room');
             $table->integer('drawing_room');
             $table->integer('dining_room');
+            $table->integer('price');
             $table->integer('garage');
             $table->text('description');
             $table->foreignId('property_type_id')->constrained('property_types')->onDelete('cascade');

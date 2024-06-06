@@ -107,7 +107,7 @@
                                 
                                 <div class="col-md-6">
                                     <label class="form-label">Property Title</label>
-                                    <input type="text" class="form-control" name="title" required placeholder="Enter Property Title">
+                                    <input type="text" class="form-control" name="title" required placeholder="Sani Houses">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Property Type</label>
@@ -161,11 +161,11 @@
 
                                 <div class="col-md-6">
                                     <label class="form-label">Bed Room</label>
-                                    <input type="text" class="form-control" name="bed_room" required placeholder="3">
+                                    <input type="number" class="form-control" name="bed_room" required placeholder="3">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Bath Room</label>
-                                    <input type="text" class="form-control" name="bath_room" required placeholder="3">
+                                    <input type="number" class="form-control" name="bath_room" required placeholder="3">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Drawing Room</label>
@@ -174,11 +174,11 @@
 
                                 <div class="col-md-6">
                                     <label class="form-label">Dining Room</label>
-                                    <input type="text" class="form-control" name="dining_room" required placeholder="1">
+                                    <input type="number" class="form-control" name="dining_room" required placeholder="1">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Garage</label>
-                                    <input type="text" class="form-control" name="garage" required placeholder="1">
+                                    <input type="number" class="form-control" name="garage" required placeholder="1">
                                 </div>
 
                                 <div class="col-md-6">
@@ -190,6 +190,11 @@
                                     <label class="form-label">Image</label>
                                     <input type="file" class="form-control" name="image" accept="image/jpeg,image/jpg">
                                     <small class="form-text text-muted">Supported files: jpeg, jpg. Image will be resized into 992x740px.</small>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Price</label>
+                                    <input type="number" class="form-control" name="price" required placeholder="10000">
                                 </div>
                                 <div class="col-md-12 mt-4">
                                     <h5>Property Owner Information</h5>
