@@ -52,6 +52,14 @@ class PropertyController extends Controller
             'owner_twitter' => 'nullable|url',
             'owner_linkedin' => 'nullable|url',
             'owner_instagram' => 'nullable|url',
+            'land_area' => 'required|string',
+            'appartment_size' => 'required|string',
+            'bed_room' => 'required|integer',
+            'bath_room' => 'required|integer',
+            'drawing_room' => 'required|integer',
+            'dining_room' => 'required|integer',
+            'garage' => 'required|integer',
+            'description' => 'required|string',
         ]);
 
        $property = new Property($request->except('image'));
@@ -65,7 +73,7 @@ class PropertyController extends Controller
         $property->status = 0; // Default status to pending
         $property->save();
 
-        return redirect()->back()->with('message', 'Property added successfully and is pending approval.');
+        return back()->with('message', 'Property added successfully and is pending approval.');
     }
     
     public function update(Request $request)
