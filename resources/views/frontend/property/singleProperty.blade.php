@@ -3,51 +3,47 @@
 @section('body')
 <main id="main">
 
-    <!-- ======= Intro Single ======= -->
-    <section class="intro-single">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-8">
-            <div class="title-single-box">
-              <h1 class="title-single">304 Blaster Up</h1>
-              <span class="color-text-a">Chicago, IL 606543</span>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-4">
-            <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="index.html">Home</a>
-                </li>
-                <li class="breadcrumb-item">
-                  <a href="property-grid.html">Properties</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  304 Blaster Up
-                </li>
-              </ol>
-            </nav>
+  <!-- ======= Intro Single ======= -->
+  <section class="intro-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-8">
+          <div class="title-single-box">
+            <h1 class="title-single">304 Blaster Up</h1>
+            <span class="color-text-a">Chicago, IL 606543</span>
           </div>
         </div>
+        <div class="col-md-12 col-lg-4">
+          <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="property-grid.html">Properties</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                304 Blaster Up
+              </li>
+            </ol>
+          </nav>
+        </div>
       </div>
-    </section>
-<section class="property-single nav-arrow-b">
+    </div>
+  </section>
+  <section class="property-single nav-arrow-b">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div id="property-single-carousel" class="swiper">
-            <div class="swiper-wrapper">
-              <div class="carousel-item-b swiper-slide">
-                <img src="{{asset('/')}}frontend/assets/img/slide-1.jpg" alt="">
-              </div>
-              <div class="carousel-item-b swiper-slide">
-                <img src="{{asset('/')}}frontend/assets/img/slide-2.jpg" alt="">
-              </div>
+            <div class="carousel-item-b swiper-slide" style="height: 572px; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+              <img src="{{ asset($property->image) }}" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
             </div>
+
           </div>
-          <div class="property-single-carousel-pagination carousel-pagination"></div>
         </div>
       </div>
+      <br>
 
       <div class="row">
         <div class="col-sm-12">
@@ -76,37 +72,47 @@
                   <ul class="list">
                     <li class="d-flex justify-content-between">
                       <strong>Property ID:</strong>
-                      <span>1134</span>
-                    </li>
-                    <li class="d-flex justify-content-between">
-                      <strong>Location:</strong>
                       <span>{{ $property->owner_phone }}</span>
                     </li>
                     <li class="d-flex justify-content-between">
-                      <strong>Property Type:</strong>
-                      <span>House</span>
+                      <strong>Property Title:</strong>
+                      <span>{{ $property->title }}</span>
                     </li>
                     <li class="d-flex justify-content-between">
-                      <strong>Status:</strong>
-                      <span>Sale</span>
+                      <strong>Location:</strong>
+                      <span>{{ $property->location->name }}</span>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                      <strong>Property Type:</strong>
+                      <span>{{ $property->propertyType->name }}</span>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                      <strong>Purpose:</strong>
+                      <span>{{ $property->property_purpose }}</span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Area:</strong>
-                      <span>340m
-                        <sup>2</sup>
+                      <span>{{ $property->land_area }}
+                      
+                      </span>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                      <strong>Appartment Size:</strong>
+                      <span>{{ $property->appartment_size }}
+                      
                       </span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Beds:</strong>
-                      <span>4</span>
+                      <span>{{ $property->bed_room }}</span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Baths:</strong>
-                      <span>2</span>
+                      <span>{{ $property->bath_room }}</span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Garage:</strong>
-                      <span>1</span>
+                      <span>{{ $property->garage }}</span>
                     </li>
                   </ul>
                 </div>
@@ -122,17 +128,9 @@
               </div>
               <div class="property-description">
                 <p class="description color-text-a">
-                  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
-                  neque, auctor sit amet
-                  aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta.
-                  Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt
-                  nibh pulvinar quam id dui posuere blandit.
+                 {{ $property->description }}
                 </p>
-                <p class="description color-text-a no-margin">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget
-                  malesuada. Quisque velit nisi,
-                  pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.
-                </p>
+               
               </div>
               <div class="row section-t3">
                 <div class="col-sm-12">
