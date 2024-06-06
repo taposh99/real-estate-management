@@ -25,4 +25,23 @@ class Property extends Model
     {
         return $this->belongsTo(PropertyType::class);
     }
+
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($property) {
+            $property->code = self::generateUniqueCode();
+        });
+    }
+
+    public static function generateUniqueCode()
+    {
+        $code = mt_rand(1000, 9999);
+        while (self::where('code', $code)->exists()) {
+            $code = mt_rand(1000, 9999);
+        }
+        return $code;
+    }
 }

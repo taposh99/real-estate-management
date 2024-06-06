@@ -14,6 +14,15 @@ return new class extends Migration
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('code')->unique();
+            $table->string('land_area');
+            $table->string('appartment_size');
+            $table->integer('bed_room');
+            $table->integer('bath_room');
+            $table->integer('drawing_room');
+            $table->integer('dining_room');
+            $table->integer('garage');
+            $table->text('description');
             $table->foreignId('property_type_id')->constrained('property_types')->onDelete('cascade');
             $table->foreignId('city_id')->constrained('cities')->onDelete('cascade');
             $table->foreignId('location_id')->constrained('locations')->onDelete('cascade');

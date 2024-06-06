@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Mail\ContactFormMail;
 use App\Models\Contact;
+use App\Models\ContactForm;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
@@ -24,7 +25,7 @@ class ContactController extends Controller
             return back()->withErrors($validator)->withInput();
         }
     
-        $contact = Contact::create([
+        $contact = ContactForm::create([
             'name' => $request->name,
             'email' => $request->email,
             'subject' => $request->subject,

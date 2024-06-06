@@ -103,6 +103,8 @@
                                 @endif
                             </div>
                             <div class="row">
+                               
+                                
                                 <div class="col-md-6">
                                     <label class="form-label">Property Title</label>
                                     <input type="text" class="form-control" name="title" required placeholder="Enter Property Title">
@@ -147,6 +149,43 @@
                                     <label class="form-label">Property Video Link</label>
                                     <input type="url" class="form-control" name="video_link" placeholder="https://www.youtube.com/embed/example">
                                 </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Land Area</label>
+                                    <input type="text" class="form-control" name="land_area" required placeholder="350 Katha">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Appartment Size</label>
+                                    <input type="text" class="form-control" name="appartment_size" required placeholder="500 Sft">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Bed Room</label>
+                                    <input type="text" class="form-control" name="bed_room" required placeholder="3">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Bath Room</label>
+                                    <input type="text" class="form-control" name="bath_room" required placeholder="3">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Drawing Room</label>
+                                    <input type="text" class="form-control" name="drawing_room" required placeholder="1">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Dining Room</label>
+                                    <input type="text" class="form-control" name="dining_room" required placeholder="1">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Garage</label>
+                                    <input type="text" class="form-control" name="garage" required placeholder="1">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">properties Description</label>
+                                    <textarea class="form-control" name="description" required placeholder="Enter Property Description"></textarea>
+                                </div>
+                               
                                 <div class="col-md-6">
                                     <label class="form-label">Image</label>
                                     <input type="file" class="form-control" name="image" accept="image/jpeg,image/jpg">
