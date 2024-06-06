@@ -170,15 +170,15 @@
         
                                 <div class="card-overlay">
                                     <div class="card-overlay-a-content">
-                                        <div class="card-header-a">
+                                        <!-- <div class="card-header-a">
                                             <h2 class="card-title-a">
                                                 <a href="property-single.html">206 Mount
                                                     <br /> Olive Road Two</a>
                                             </h2>
-                                        </div>
+                                        </div> -->
                                         <div class="card-body-a">
                                             <div class="price-box d-flex">
-                                                <span class="price-a">rent | $ 12.000</span>
+                                                <span class="price-a">Price | {{$data->price}} Tk</span>
                                             </div>
                                             <a href="{{ route('property.single', ['id' => $data->id]) }}" class="link-a">Click here to view
                                                 <span class="bi bi-chevron-right"></span>
@@ -189,19 +189,19 @@
                                             <ul class="card-info d-flex justify-content-around">
                                                 <li>
                                                     <h4 class="card-info-title">Area</h4>
-                                                    <span>340m<sup>2</sup></span>
+                                                    <span>{{$data->land_area}}</span>
                                                 </li>
                                                 <li>
                                                     <h4 class="card-info-title">Beds</h4>
-                                                    <span>2</span>
+                                                    <span>{{$data->bath_room}}</span>
                                                 </li>
                                                 <li>
                                                     <h4 class="card-info-title">Baths</h4>
-                                                    <span>4</span>
+                                                    <span>{{$data->bath_room}}</span>
                                                 </li>
                                                 <li>
-                                                    <h4 class="card-info-title">Garages</h4>
-                                                    <span>1</span>
+                                                    <h4 class="card-info-title">City</h4>
+                                                    <span>{{$data->city->name}}</span>
                                                 </li>
                                             </ul>
                                         </div>

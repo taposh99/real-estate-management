@@ -59,6 +59,7 @@ class PropertyController extends Controller
             'drawing_room' => 'required|integer',
             'dining_room' => 'required|integer',
             'garage' => 'required|integer',
+            'price' => 'required|integer',
             'description' => 'required|string',
         ]);
 
