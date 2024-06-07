@@ -30,6 +30,10 @@ class ForntEndDashboardController extends Controller
     {
         return view('frontend.contact.index');
     }
+    public function aboutPage()
+    {
+        return view('frontend.aboutus.aboutus');
+    }
 
     public function propertyPage(Request $request)
     {
