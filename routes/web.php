@@ -4,6 +4,7 @@ use App\Http\Controllers\AdvertisementController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\ForntEnd\BannerController;
 use App\Http\Controllers\ForntEnd\ContactUsController;
 use App\Http\Controllers\ForntEndDashboardController;
@@ -11,6 +12,7 @@ use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\PropertyTypeController;
+use App\Http\Controllers\ResetPasswordController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -115,6 +117,13 @@ Route::delete('/advertisement/delete', [AdvertisementController::class, 'destroy
  */
 Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 
+/**
+ * Password reset
+ */
+Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 
 
 
