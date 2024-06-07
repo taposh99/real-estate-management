@@ -125,7 +125,15 @@ Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEm
 Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 
-
+/**
+ * user contact form
+ */
 
 Route::post('/contact/page', [ContactController::class, 'store'])->name('contact.clientpage');
+Route::get('/client', [ContactController::class, 'index'])->name('client.index');
+Route::delete('/client/delete', [ContactController::class, 'destroy'])->name('client.delete');
+
+/**
+ * Profile update
+ */
 Route::post('/profile', [ProfileController::class, 'update'])->name('profile.update');
