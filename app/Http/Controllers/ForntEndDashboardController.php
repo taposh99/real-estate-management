@@ -43,6 +43,30 @@ class ForntEndDashboardController extends Controller
                 $query->orderBy('created_at', 'desc');
             }
         }
+        if ($request->has('city') && $request->input('city') != 'All City') {
+            $city = $request->input('city');
+            $query->whereHas('city', function ($q) use ($city) {
+                $q->where('name', $city);
+            });
+        }
+        
+    
+        if ($request->has('bedrooms') && $request->input('bedrooms') != 'Any') {
+            $bedrooms = $request->input('bedrooms');
+            $query->where('bed_room', $bedrooms);
+        }
+        
+        if ($request->has('garages') && $request->input('garages') != 'Any') {
+            $garages = $request->input('garages');
+            $query->where('garage', $garages);
+        }
+        
+        if ($request->has('bathrooms') && $request->input('bathrooms') != 'Any') {
+            $bathrooms = $request->input('bathrooms');
+            $query->where('bath_room', $bathrooms);
+        }
+        
+    
     
         $properties = $query->latest()->get();
         return view('frontend.property.index', compact('properties'));
