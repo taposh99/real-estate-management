@@ -51,6 +51,11 @@
 					</ul>
 				</li>
 
+				<li class="nav-item">
+					<a href="{{route('client.index')}}" class="nav-link "><span class="pcoded-micon"><i class="fa-brands fa-slack"></i></span><span class="pcoded-mtext">Client message</span></a>
+					
+				</li>
+
 				<li class="nav-item pcoded-hasmenu">
 					<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa-user"></i></span><span class="pcoded-mtext">User Management</span></a>
 					<ul class="pcoded-submenu">
