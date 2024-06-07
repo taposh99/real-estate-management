@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdvertisementController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\ContactController;
@@ -28,6 +29,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ForntEndDashboardController::class, 'index'])->name('home');
 Route::get('/contact-page', [ForntEndDashboardController::class, 'contactPage'])->name('contact.page');
 Route::get('/property-page', [ForntEndDashboardController::class, 'propertyPage'])->name('property.page');
+Route::get('/about-page', [ForntEndDashboardController::class, 'aboutPage'])->name('about.page');
 Route::get('/property-page/{id}', [ForntEndDashboardController::class, 'propertyPageSingle'])->name('property.single');
 
 
@@ -96,6 +98,16 @@ Route::post('/contact-store', [ContactUsController::class, 'store'])->name('cont
 Route::get('/contact/edit/{id}', [ContactUsController::class, 'edit'])->name('contact.edit');
 Route::post('/contact/update', [ContactUsController::class, 'update'])->name('contact.update');
 Route::delete('/contact/delete', [ContactUsController::class, 'destroy'])->name('contact.delete');
+
+
+/**
+ * Advetisement site
+ */
+Route::get('/advertisement', [AdvertisementController::class, 'index'])->name('advertisement.index');
+Route::post('/advertisement-store', [AdvertisementController::class, 'store'])->name('advertisement.store');
+Route::get('/advertisement/edit/{id}', [AdvertisementController::class, 'edit'])->name('advertisement.edit');
+Route::post('/advertisement/update', [AdvertisementController::class, 'update'])->name('advertisement.update');
+Route::delete('/advertisement/delete', [AdvertisementController::class, 'destroy'])->name('advertisement.delete');
 
 
 Route::post('/contact/page', [ContactController::class, 'store'])->name('contact.clientpage');

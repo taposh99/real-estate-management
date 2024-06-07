@@ -39,7 +39,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a href="#" class="nav-link "><span class="pcoded-micon"><i class="fa-brands fa-slack"></i></span><span class="pcoded-mtext">Advertisement</span></a>
+					<a href="{{route('advertisement.index')}}" class="nav-link "><span class="pcoded-micon"><i class="fa-brands fa-slack"></i></span><span class="pcoded-mtext">Advertisement</span></a>
 					
 				</li>
 
