@@ -11,7 +11,7 @@ class AdvertisementController extends Controller
     public function index()
     {
         $allAdvertisement = Advertisement::latest()->paginate(10);
-        return view('ForntEndPage.advertisement.index', compact('allAdvertisement'));
+        return view('forntEndPage.advertisement.index', compact('allAdvertisement'));
     }
 
     public function store(Request $request)

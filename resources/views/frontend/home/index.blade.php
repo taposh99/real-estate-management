@@ -23,7 +23,7 @@
 
                                     </h1>
                                     <p class="intro-subtitle intro-price">
-                                        <a href="#">
+                                        <a href="{{route('about.page')}}">
                                             <span class="price-a" style="background-color: #ff9900; padding: 10px 20px; color: #ffffff; border-radius: 5px; transition: background-color 0.3s;">
                                                 Read More
                                             </span>
