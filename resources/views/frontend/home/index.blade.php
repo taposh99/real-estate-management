@@ -169,15 +169,15 @@
 
                             <div class="card-overlay">
                                 <div class="card-overlay-a-content">
-                                    <!-- <div class="card-header-a">
-                                            <h2 class="card-title-a">
-                                                <a href="property-single.html">206 Mount
-                                                    <br /> Olive Road Two</a>
-                                            </h2>
-                                        </div> -->
+                                    <!-- <div class="card-header-a" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; padding: 10px;">
+                                        <h5 class="price-box d-flex">
+                                            {{ $data->title }}
+                                        </h5>
+                                    </div> -->
+
                                     <div class="card-body-a">
                                         <div class="price-box d-flex">
-                                            <span class="price-a">Price | {{$data->price}} Tk</span>
+                                            <span class="price-a"> {{ $data->title }}</span>
                                         </div>
                                         <a href="{{ route('property.single', ['id' => $data->id]) }}" class="link-a">Click here to view
                                             <span class="bi bi-chevron-right"></span>
@@ -237,21 +237,21 @@
             </div>
 
             <div id="news-carousel" class="swiper">
-    <div class="swiper-wrapper">
-        @forelse ($allAdvertisement as $data)
+                <div class="swiper-wrapper">
+                    @forelse ($allAdvertisement as $data)
 
-        <div class="carousel-item-c swiper-slide">
-            <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b" style="height: 320px; overflow: hidden;">
-                    <img src="{{ asset('images/advertisement/' . $data->image) }}" alt="" class="img-b img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="carousel-item-c swiper-slide">
+                        <div class="card-box-b card-shadow news-box">
+                            <div class="img-box-b" style="height: 320px; overflow: hidden;">
+                                <img src="{{ asset('images/advertisement/' . $data->image) }}" alt="" class="img-b img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                    @empty
+                    <p>No Banners found.</p>
+                    @endforelse
                 </div>
             </div>
-        </div>
-        @empty
-        <p>No Banners found.</p>
-        @endforelse
-    </div>
-</div>
 
 
             <div class="news-carousel-pagination carousel-pagination"></div>
