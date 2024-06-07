@@ -8,6 +8,7 @@ use App\Http\Controllers\ForntEnd\BannerController;
 use App\Http\Controllers\ForntEnd\ContactUsController;
 use App\Http\Controllers\ForntEndDashboardController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\PropertyTypeController;
 use Illuminate\Support\Facades\Route;
@@ -109,5 +110,13 @@ Route::get('/advertisement/edit/{id}', [AdvertisementController::class, 'edit'])
 Route::post('/advertisement/update', [AdvertisementController::class, 'update'])->name('advertisement.update');
 Route::delete('/advertisement/delete', [AdvertisementController::class, 'destroy'])->name('advertisement.delete');
 
+/**
+ * Profile setting
+ */
+Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+
+
+
 
 Route::post('/contact/page', [ContactController::class, 'store'])->name('contact.clientpage');
+Route::post('/profile', [ProfileController::class, 'update'])->name('profile.update');
