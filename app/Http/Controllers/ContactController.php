@@ -19,6 +19,7 @@ class ContactController extends Controller
             'email' => 'required|string|email|max:255|unique:contacts',
             'subject' => 'required|string|max:255',
             'message' => 'required|string',
+            'number' => 'required|string',
         ]);
     
         if ($validator->fails()) {
@@ -30,6 +31,7 @@ class ContactController extends Controller
             'email' => $request->email,
             'subject' => $request->subject,
             'message' => $request->message,
+            'number' => $request->number,
         ]);
     
         try {
@@ -42,6 +44,19 @@ class ContactController extends Controller
             // Redirect back with error message
             return back()->withErrors('Error sending email. Please try again later.');
         }
+    }
+    
+
+    public function index()
+    {
+        $allContact = ContactForm::latest()->paginate(10);
+        return view('UserContactForm.index', compact('allContact'));
+    }
+    public function destroy(Request $request)
+    {
+        ContactForm::destroy($request->contact_delete_id);
+
+        return back()->with('success', 'Deleted successfully');
     }
     
 }

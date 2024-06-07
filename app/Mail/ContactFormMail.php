@@ -43,6 +43,7 @@ class ContactFormMail extends Mailable
                 'subject' => $this->contact->subject,
                       
                 'email' => $this->contact->email,
+                'number' => $this->contact->number,
                 'contactMessage' => $this->contact->message,
             ]);
 
