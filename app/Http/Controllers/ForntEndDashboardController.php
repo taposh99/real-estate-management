@@ -18,10 +18,9 @@ class ForntEndDashboardController extends Controller
 
         return view('frontend.home.index', compact('allBanner','properties','allAdvertisement'));
     }
-    public function propertyPageSingle($id)
+    public function propertyPageSingle($code)
     {
-        $property = Property::findOrFail($id);
-          
+        $property = Property::where('code', $code)->firstOrFail();          
         return view('frontend.property.singleProperty', compact('property'));
     }
     

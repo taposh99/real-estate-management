@@ -179,7 +179,7 @@
                                         <div class="price-box d-flex">
                                             <span class="price-a"> {{ $data->title }}</span>
                                         </div>
-                                        <a href="{{ route('property.single', ['id' => $data->id]) }}" class="link-a">Click here to view
+                                        <a href="{{ route('property.single', ['code' => $data->code]) }}" class="link-a">Click here to view
                                             <span class="bi bi-chevron-right"></span>
                                         </a>
 
