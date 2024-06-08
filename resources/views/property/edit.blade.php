@@ -119,6 +119,10 @@
                                 <h5>Property Owner Information</h5>
                             </div>
                             <div class="col-md-6">
+                                <label class="form-label">Property_Location</label>
+                                <input type="text" class="form-control" name="property_location" required placeholder="Enter Full Name" value="{{ $editPropertyValues->property_location }}">
+                            </div>
+                            <div class="col-md-6">
                                 <label class="form-label">Full Name</label>
                                 <input type="text" class="form-control" name="owner_name" required placeholder="Enter Full Name" value="{{ $editPropertyValues->owner_name }}">
                             </div>

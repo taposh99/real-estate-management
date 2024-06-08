@@ -32,6 +32,7 @@
             <hr>
             <div class="owner-info">
                 <h4>Owner Information</h4>
+                <p><strong>Property Location:</strong> <span>{{ $property->property_location }}</span></p>
                 <p><strong>Full Name:</strong> <span>{{ $property->owner_name }}</span></p>
                 <p><strong>Phone:</strong> <span>{{ $property->owner_phone }}</span></p>
                 <p><strong>Email:</strong> <span>{{ $property->owner_email }}</span></p>
