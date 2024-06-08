@@ -152,19 +152,7 @@
                     </li>
                     @endif
                 
-                    @if($property->owner_name)
-                    <li class="d-flex justify-content-between">
-                      <strong>Property Owner Name:</strong>
-                      <span>{{ $property->owner_name }}</span>
-                    </li>
-                    @endif
-
-                    @if($property->owner_phone)
-                    <li class="d-flex justify-content-between">
-                      <strong>Owner Number:</strong>
-                      <span>{{ $property->owner_phone }}</span>
-                    </li>
-                    @endif
+                
                   </ul>
 
                 </div>
@@ -295,7 +283,7 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="col-md-12 col-lg-4">
+        
               <div class="property-contact">
                 <form class="form-a">
                   <div class="row">
