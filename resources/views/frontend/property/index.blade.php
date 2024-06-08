@@ -20,18 +20,7 @@
 <section class="property-grid grid">
     <div class="container">
         <div class="row">
-            <!-- <div class="col-sm-12">
-                <div class="grid-option">
-                    <form method="GET" action="{{ route('property.page') }}">
-                        <select name="filter" class="custom-select" onchange="this.form.submit()">
-                            <option value="" selected>All</option>
-                            <option value="new_to_old" {{ request('filter') == 'new_to_old' ? 'selected' : '' }}>New to Old</option>
-                            <option value="sale" {{ request('filter') == 'sale' ? 'selected' : '' }}>For Sale</option>
-                            <option value="rent" {{ request('filter') == 'rent' ? 'selected' : '' }}>For Rent</option>
-                        </select>
-                    </form>
-                </div>
-            </div> -->
+          
             @forelse ($properties as $data)
             <div class="col-md-4">
                 <div class="card-box-a card-shadow">
@@ -107,11 +96,7 @@
     </div>
 </section>
 
-<script>
-    document.querySelector('select[name="filter"]').addEventListener('change', function() {
-        this.form.submit();
-    });
-</script>
+
 
 
 @endsection

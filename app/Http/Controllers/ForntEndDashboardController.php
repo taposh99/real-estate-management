@@ -78,6 +78,12 @@ class ForntEndDashboardController extends Controller
                 $q->where('id', $pType);
             });
         }
+        if ($request->has('location_type') && $request->input('location_type') != '') {
+            $locationType = $request->input('location_type');
+            $query->whereHas('location', function ($q) use ($locationType) {
+                $q->where('id', $locationType);
+            });
+        }
     
         $properties = $query->latest()->get();
         return view('frontend.property.index', compact('properties'));

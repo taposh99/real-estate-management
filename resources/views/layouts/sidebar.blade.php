@@ -22,7 +22,7 @@
 					
 				</li>
 				<li class="nav-item">
-					<a href="{{route('location.index')}}" class="nav-link"><span class="pcoded-micon"><i class="fa-solid fa-location-crosshairs"></i></span><span class="pcoded-mtext">Manage Location</span></a>
+					<a href="{{route('location.index')}}" class="nav-link"><span class="pcoded-micon"><i class="fa-solid fa-location-crosshairs"></i></span><span class="pcoded-mtext">Manage Location Area</span></a>
 					
 				</li>
 				<li class="nav-item">

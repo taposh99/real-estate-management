@@ -175,4 +175,12 @@ class PropertyController extends Controller
 
         return redirect()->back()->with('message', 'Property status updated successfully.');
     }
+
+    public function show($id)
+{
+    $property = Property::with('city', 'location','propertyType')->findOrFail($id);
+
+    return view('property.show', compact('property'));
+}
+
 }

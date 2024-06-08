@@ -7,7 +7,7 @@
         <div class="pcoded-content">
             <div class="container mt-5">
                 <div class="text-center">
-                    <h4 class="mt-2 mb-2">location City</h4>
+                    <h4 class="mt-2 mb-2">location Area Update </h4>
                     <!-- message -->
                     @if(session()->has('message'))
                     <div class="alert alert-success text-center mt-4">{{ session()->get('message') }}</div>
@@ -35,7 +35,7 @@
                                 @endif
 
                                 <div class="form-group mb-3">
-                                    <label class="form-label">location <span class="text-danger">*</span></label>
+                                    <label class="form-label">Location Area / Thana <span class="text-danger">*</span></label>
                                     <input type="text" name="name" class="form-control" required value="{{ $editLocationValues->name }}">
                                 </div>
 

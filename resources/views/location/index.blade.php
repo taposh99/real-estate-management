@@ -18,12 +18,12 @@
 
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5>Location List</h5>
+                            <h5>Location Area List</h5>
                             <!-- Search box -->
                             <input type="text" id="searchBox" class="form-control w-25" placeholder="Search...">
                             <!-- Button to open modal -->
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#categoryModal">
-                            Add Location 
+                            Add Location Area
                             </button>
                         </div>
                         <div class="card-body table-border-style">
@@ -32,7 +32,7 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Name</th>
+                                            <th>Location Area / Thana</th>
                                             <th>City</th>
                                             <th>Action</th>
                                         </tr>
@@ -84,7 +84,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="categoryModalLabel">Add Location</h5>
+                    <h5 class="modal-title" id="categoryModalLabel">Location Area</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
@@ -103,8 +103,8 @@
                                 </div>
                                 @endif
                             </div>
-                            <label class="form-label">Location Name</label>
-                            <input type="text" class="form-control" name="name" id="categoryName" required placeholder="Dhanmondhi 27">
+                            <label class="form-label">Location Area / Thana</label>
+                            <input type="text" class="form-control" name="name" id="categoryName" required placeholder="Dhanmondhi">
 
                             <label class="form-label">City</label>
                             <select class="form-control" name="city_id">

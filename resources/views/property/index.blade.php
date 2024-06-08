@@ -54,6 +54,10 @@
                                                 @endif
                                             </td>
                                             <td class="d-flex">
+                                                  <!-- View Icon -->
+                <a class="btn btn-info me-1" href="#" data-bs-toggle="modal" data-bs-target="#viewPropertyModal" data-id="{{ $property->id }}" style="font-size: 13px; width: 40px; display: inline-block; text-align: center;">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </a>
                                                 <a class="btn btn-primary me-1" href="{{ route('property.edit', encrypt($property->id)) }}" style="font-size: 13px; width: 40px; display: inline-block; text-align: center;">
                                                     <i class="fa fa-edit" aria-hidden="true"></i>
                                                 </a>
@@ -128,7 +132,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">Location <span class="text-danger">*</span></label>
+                                    <label class="form-label">Location Area / Thana <span class="text-danger">*</span></label>
                                     <select class="form-control" name="location_id" required>
                                         <option value="">Select One</option>
                                         @foreach ($locations as $data)
@@ -234,6 +238,44 @@
             </div>
         </div>
     </div>
+    <!-- Modal Structure -->
+<div class="modal fade" id="viewPropertyModal" tabindex="-1" aria-labelledby="viewPropertyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewPropertyModalLabel">Property Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Property details will be loaded here dynamically -->
+                <div id="propertyDetails"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    $('#viewPropertyModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var propertyId = button.data('id'); // Extract info from data-* attributes
+
+        // AJAX request to get property details
+        $.ajax({
+            url: '/properties/' + propertyId, // Adjust the URL as needed
+            method: 'GET',
+            success: function (data) {
+                // Load the property details into the modal
+                $('#propertyDetails').html(data);
+            },
+            error: function (xhr, status, error) {
+                console.error(error);
+                alert('Failed to load property details.');
+            }
+        });
+    });
+});
+</script>
+
 
     <!-- Bootstrap JS and dependencies (Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
