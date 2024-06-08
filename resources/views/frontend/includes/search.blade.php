@@ -1,3 +1,7 @@
+@php
+use App\Models\PropertyType;
+$propertyTypes = PropertyType::all();
+@endphp
 <div class="click-closed"></div>
 <!--/ Form Search Star /-->
 <div class="box-collapse">
@@ -8,21 +12,17 @@
     <div class="box-collapse-wrap form">
         <form id="propertyForm" class="form-a" action="{{ route('property.page') }}" method="GET">
             <div class="row">
-                <!-- <div class="col-md-12 mb-2">
-                <div class="form-group">
-                    <label class="pb-2" for="Keyword">Keyword</label>
-                    <input type="text" class="form-control form-control-lg form-control-a" id="Keyword" name="keyword" placeholder="Keyword">
-                </div>
-            </div> -->
+             
                 <div class="col-md-6 mb-2">
                     <div class="form-group mt-3">
-                        <label class="pb-2" for="Type">Type</label>
-                        <select class="form-control form-select form-control-a" id="Type" name="filter">
-                            <option value="" selected>All</option>
-                            <option value="sale" {{ request('filter') == 'sale' ? 'selected' : '' }}>For Sale</option>
-                            <option value="rent" {{ request('filter') == 'rent' ? 'selected' : '' }}>For Rent</option>
-                            <option value="new_to_old" {{ request('filter') == 'new_to_old' ? 'selected' : '' }}>New to Old</option>
-
+                        <label class="pb-2" for="Type">Property Type</label>
+                        <select class="form-control form-select form-control-a" id="Type" name="p_type">
+                            <option value="" {{ request('p_type') == '' ? 'selected' : '' }}>All</option>
+                            @foreach($propertyTypes as $type)
+                            <option value="{{ $type->id }}" {{ request('p_type') == $type->id ? 'selected' : '' }}>
+                                {{ $type->name }}
+                            </option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                     <div class="form-group mt-3">
                         <label class="pb-2" for="garages">Garages</label>
                         <select class="form-control form-select form-control-a" id="garages" name="garages">
-                        <option value="Any" {{ request('garages') == 'Any' ? 'selected' : '' }}>Any</option>
+                            <option value="Any" {{ request('garages') == 'Any' ? 'selected' : '' }}>Any</option>
                             <option value="1" {{ request('garages') == '1' ? 'selected' : '' }}>1</option>
                             <option value="2" {{ request('garages') == '2' ? 'selected' : '' }}>2</option>
                         </select>
@@ -67,7 +67,7 @@
                     <div class="form-group mt-3">
                         <label class="pb-2" for="bathrooms">Bathrooms</label>
                         <select class="form-control form-select form-control-a" id="bathrooms" name="bathrooms">
-                        <option value="Any" {{ request('bathrooms') == 'Any' ? 'selected' : '' }}>Any</option>
+                            <option value="Any" {{ request('bathrooms') == 'Any' ? 'selected' : '' }}>Any</option>
                             <option value="1" {{ request('bathrooms') == '1' ? 'selected' : '' }}>1</option>
                             <option value="2" {{ request('bathrooms') == '2' ? 'selected' : '' }}>2</option>
                             <option value="3" {{ request('bathrooms') == '3' ? 'selected' : '' }}>3</option>
@@ -76,7 +76,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-md-6 mb-2">
+                <!-- <div class="col-md-6 mb-2">
                     <div class="form-group mt-3">
                         <label class="pb-2" for="price">Min Price</label>
                         <select class="form-control form-select form-control-a" id="price" name="min_price">
@@ -85,6 +85,18 @@
                             <option>$100,000</option>
                             <option>$150,000</option>
                             <option>$200,000</option>
+                        </select>
+                    </div>
+                </div> -->
+                <div class="col-md-6 mb-2">
+                    <div class="form-group mt-3">
+                        <label class="pb-2" for="Type">Property Purpose</label>
+                        <select class="form-control form-select form-control-a" id="Type" name="filter">
+                            <option value="" selected>All</option>
+                            <option value="sale" {{ request('filter') == 'sale' ? 'selected' : '' }}>For Buy</option>
+                            <option value="rent" {{ request('filter') == 'rent' ? 'selected' : '' }}>For Rent</option>
+                            <option value="new_to_old" {{ request('filter') == 'new_to_old' ? 'selected' : '' }}>New to Old</option>
+
                         </select>
                     </div>
                 </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Advertisement;
 use App\Models\Banner;
 use App\Models\Property;
+use App\Models\PropertyType;
 use Illuminate\Http\Request;
 
 class ForntEndDashboardController extends Controller
@@ -71,11 +72,23 @@ class ForntEndDashboardController extends Controller
             $query->where('bath_room', $bathrooms);
         }
         
-    
+        if ($request->has('p_type') && $request->input('p_type') != '') {
+            $pType = $request->input('p_type');
+            $query->whereHas('propertyType', function ($q) use ($pType) {
+                $q->where('id', $pType);
+            });
+        }
     
         $properties = $query->latest()->get();
         return view('frontend.property.index', compact('properties'));
 
     }
-   
+    
+    // public function searchPage()
+    // {
+    //     $allPropertyType = PropertyType::latest()->get();
+
+    //     return view('frontend.includes.search',compact('allPropertyType'));
+    // }
+
 }

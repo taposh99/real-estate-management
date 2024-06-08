@@ -33,6 +33,7 @@ Route::get('/', [ForntEndDashboardController::class, 'index'])->name('home');
 Route::get('/contact-page', [ForntEndDashboardController::class, 'contactPage'])->name('contact.page');
 Route::get('/property-page', [ForntEndDashboardController::class, 'propertyPage'])->name('property.page');
 Route::get('/about-page', [ForntEndDashboardController::class, 'aboutPage'])->name('about.page');
+// Route::get('/search-page', [ForntEndDashboardController::class, 'searchPage'])->name('search.page');
 Route::get('/property-page/{code}', [ForntEndDashboardController::class, 'propertyPageSingle'])->name('property.single');
 
 
@@ -104,7 +105,7 @@ Route::delete('/contact/delete', [ContactUsController::class, 'destroy'])->name(
 
 
 /**
- * Advetisement site
+ * Advertisement site
  */
 Route::get('/advertisement', [AdvertisementController::class, 'index'])->name('advertisement.index');
 Route::post('/advertisement-store', [AdvertisementController::class, 'store'])->name('advertisement.store');
