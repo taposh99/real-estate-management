@@ -37,6 +37,7 @@ return new class extends Migration
             $table->string('owner_twitter')->nullable();
             $table->string('owner_linkedin')->nullable();
             $table->string('owner_instagram')->nullable();
+            $table->string('property_location')->nullable();
             $table->unsignedTinyInteger('status')->default(0); // 0: pending, 1: approved, 2: rejected
             $table->timestamps();
         });

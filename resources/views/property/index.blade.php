@@ -203,6 +203,10 @@
                                     <h5>Property Owner Information</h5>
                                 </div>
                                 <div class="col-md-6">
+                                    <label class="form-label">Property Location</label>
+                                    <input type="text" class="form-control" name="property_location"  placeholder="sobhanbag 5/3">
+                                </div>
+                                <div class="col-md-6">
                                     <label class="form-label">Full Name</label>
                                     <input type="text" class="form-control" name="owner_name"  placeholder="Enter Full Name">
                                 </div>
