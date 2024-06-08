@@ -1,6 +1,8 @@
 @php
 use App\Models\PropertyType;
+use App\Models\Location;
 $propertyTypes = PropertyType::all();
+$propertyLocations = Location::all();
 @endphp
 <div class="click-closed"></div>
 <!--/ Form Search Star /-->
@@ -37,6 +39,35 @@ $propertyTypes = PropertyType::all();
                         </select>
                     </div>
                 </div>
+
+                <div class="col-md-6 mb-2">
+                    <div class="form-group mt-3">
+                        <label class="pb-2" for="Type">Location Area / Thana</label>
+                        <select class="form-control form-select form-control-a" id="Type" name="location_type">
+                            <option value="" {{ request('location_type') == '' ? 'selected' : '' }}>All</option>
+                            @foreach($propertyLocations as $type)
+                            <option value="{{ $type->id }}" {{ request('location_type') == $type->id ? 'selected' : '' }}>
+                                {{ $type->name }}
+                            </option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-2">
+                    <div class="form-group mt-3">
+                        <label class="pb-2" for="Type">Property Purpose</label>
+                        <select class="form-control form-select form-control-a" id="Type" name="filter">
+                            <option value="" selected>All</option>
+                            <option value="sale" {{ request('filter') == 'sale' ? 'selected' : '' }}>For Buy</option>
+                            <option value="rent" {{ request('filter') == 'rent' ? 'selected' : '' }}>For Rent</option>
+                            <option value="new_to_old" {{ request('filter') == 'new_to_old' ? 'selected' : '' }}>New to Old</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                
                 <div class="col-md-6 mb-2">
                     <div class="form-group mt-3">
                         <label class="pb-2" for="bedrooms">Bedrooms</label>
@@ -88,18 +119,7 @@ $propertyTypes = PropertyType::all();
                         </select>
                     </div>
                 </div> -->
-                <div class="col-md-6 mb-2">
-                    <div class="form-group mt-3">
-                        <label class="pb-2" for="Type">Property Purpose</label>
-                        <select class="form-control form-select form-control-a" id="Type" name="filter">
-                            <option value="" selected>All</option>
-                            <option value="sale" {{ request('filter') == 'sale' ? 'selected' : '' }}>For Buy</option>
-                            <option value="rent" {{ request('filter') == 'rent' ? 'selected' : '' }}>For Rent</option>
-                            <option value="new_to_old" {{ request('filter') == 'new_to_old' ? 'selected' : '' }}>New to Old</option>
-
-                        </select>
-                    </div>
-                </div>
+              
                 <div class="col-md-12">
                     <button type="button" class="btn btn-b" id="searchButton">Search Property</button>
                 </div>

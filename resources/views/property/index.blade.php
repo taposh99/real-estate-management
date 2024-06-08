@@ -128,7 +128,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">Location <span class="text-danger">*</span></label>
+                                    <label class="form-label">Location Area / Thana <span class="text-danger">*</span></label>
                                     <select class="form-control" name="location_id" required>
                                         <option value="">Select One</option>
                                         @foreach ($locations as $data)
