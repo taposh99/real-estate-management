@@ -61,6 +61,7 @@ class PropertyController extends Controller
             'garage' => 'nullable|integer',
             'price' => 'nullable|integer',
             'description' => 'nullable|string',
+            'property_location' => 'nullable|string',
         ]);
 
         $property = new Property($request->except('image'));
@@ -104,6 +105,7 @@ class PropertyController extends Controller
             'garage' => 'nullable|integer',
             'price' => 'nullable|integer',
             'description' => 'nullable|string',
+            'property_location' => 'nullable|string',
         ]);
 
         try {
@@ -131,6 +133,7 @@ class PropertyController extends Controller
                 'garage' => $request->garage,
                 'price' => $request->price,
                 'description' => $request->description,
+                'property_location' => $request->property_location,
 
             ];
 
