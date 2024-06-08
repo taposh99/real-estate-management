@@ -169,7 +169,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Drawing Room</label>
-                                    <input type="text" class="form-control" name="drawing_room"  placeholder="1">
+                                    <input type="number" class="form-control" name="drawing_room"  placeholder="1">
                                 </div>
 
                                 <div class="col-md-6">
@@ -183,7 +183,7 @@
 
                                 <div class="col-md-6">
                                     <label class="form-label">properties Description</label>
-                                    <textarea class="form-control" name="description" required placeholder="Enter Property Description"></textarea>
+                                    <textarea class="form-control" name="description"  placeholder="Enter Property Description"></textarea>
                                 </div>
                                
                                 <div class="col-md-6">

@@ -13,41 +13,41 @@ class PropertyController extends Controller
 {
     public function index()
     {
-          
+
         $citys = City::with('property')->latest()->get();
         $locations = Location::with('property')->latest()->get();
         $propertyTypes = PropertyType::with('property')->latest()->get();
 
         $properties = Property::where('status', 1)->latest()->paginate(5);
 
-      
-        return view('property.index', compact('citys','propertyTypes','locations','properties'));
+
+        return view('property.index', compact('citys', 'propertyTypes', 'locations', 'properties'));
     }
 
     public function edit($id)
     {
         $editPropertyValues = Property::findOrFail(decrypt($id));
-        $cities = City::all(); 
-        $locations = Location::all(); 
-        $propertyTyp = PropertyType::all(); 
-    
+        $cities = City::all();
+        $locations = Location::all();
+        $propertyTyp = PropertyType::all();
+
         return view('property.edit', compact('editPropertyValues', 'cities', 'locations', 'propertyTyp'));
     }
 
     public function store(Request $request)
     {
-       
+
         $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'required|string',
             'property_type_id' => 'required',
             'city_id' => 'required',
             'location_id' => 'required',
             'property_purpose' => 'required',
             'video_link' => 'nullable|url',
             'image' => 'nullable',
-            'owner_name' => 'nullable|string|max:255',
-            'owner_phone' => 'nullable|string|max:15',
-            'owner_email' => 'nullable|email|max:255',
+            'owner_name' => 'nullable|string',
+            'owner_phone' => 'nullable|string',
+            'owner_email' => 'nullable|email',
             'owner_facebook' => 'nullable|url',
             'owner_twitter' => 'nullable|url',
             'owner_linkedin' => 'nullable|url',
@@ -63,42 +63,52 @@ class PropertyController extends Controller
             'description' => 'nullable|string',
         ]);
 
-       $property = new Property($request->except('image'));
+        $property = new Property($request->except('image'));
 
-    if ($request->hasFile('image')) {
-        $fileNameicon = time() . '.' . $request->image->getClientOriginalExtension();
-        $request->image->move(public_path('images/property'), $fileNameicon);
-        $property->image = 'images/property/' . $fileNameicon; // Save the correct path to the database
-    }
+        if ($request->hasFile('image')) {
+            $fileNameicon = time() . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images/property'), $fileNameicon);
+            $property->image = 'images/property/' . $fileNameicon; // Save the correct path to the database
+        }
 
         $property->status = 0; // Default status to pending
         $property->save();
 
         return back()->with('message', 'Property added successfully and is pending approval.');
     }
-    
+
     public function update(Request $request)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'required|string',
             'property_type_id' => 'required|integer|exists:property_types,id',
             'city_id' => 'required|integer|exists:cities,id',
             'location_id' => 'required|integer|exists:locations,id',
             'property_purpose' => 'required|string',
             'video_link' => 'nullable|url',
-            'image' => 'nullable|image|mimes:jpeg,jpg|max:2048',
-            'owner_name' => 'required|string|max:255',
-            'owner_phone' => 'required|string|max:15',
-            'owner_email' => 'required|email|max:255',
+            'image' => 'nullable|image',
+            'owner_name' => 'nullable|string',
+            'owner_phone' => 'nullable|string',
+            'owner_email' => 'nullable|email|max:255',
             'owner_facebook' => 'nullable|url',
             'owner_twitter' => 'nullable|url',
             'owner_linkedin' => 'nullable|url',
             'owner_instagram' => 'nullable|url',
+
+            'land_area' => 'nullable|string',
+            'appartment_size' => 'nullable|string',
+            'bed_room' => 'nullable|integer',
+            'bath_room' => 'nullable|integer',
+            'drawing_room' => 'nullable|integer',
+            'dining_room' => 'nullable|integer',
+            'garage' => 'nullable|integer',
+            'price' => 'nullable|integer',
+            'description' => 'nullable|string',
         ]);
-    
+
         try {
             $property = Property::findOrFail($request->property_id);
-    
+
             $updateData = [
                 'title' => $request->title,
                 'property_type_id' => $request->property_type_id,
@@ -113,34 +123,43 @@ class PropertyController extends Controller
                 'owner_twitter' => $request->owner_twitter,
                 'owner_linkedin' => $request->owner_linkedin,
                 'owner_instagram' => $request->owner_instagram,
+                'land_area' => $request->land_area,
+                'appartment_size' => $request->appartment_size,
+                'bed_room' => $request->bed_room,
+                'bath_room' => $request->bath_room,
+                'drawing_room' => $request->drawing_room,
+                'garage' => $request->garage,
+                'price' => $request->price,
+                'description' => $request->description,
+
             ];
-    
+
             if ($request->hasFile('image')) {
                 $fileNameicon = time() . '.' . $request->image->getClientOriginalExtension();
                 $request->image->move(public_path('images/property'), $fileNameicon);
                 $updateData['image'] = 'images/property/' . $fileNameicon;
             }
-    
+
             $property->update($updateData);
-    
+
             return back()->with('success', 'Update successfully');
         } catch (Exception $exception) {
             return back()->with('error', 'Something went wrong: ' . $exception->getMessage());
         }
-        }
-    
-    
+    }
+
+
 
     public function PropertyPendingindex()
     {
         $pendingPropertyValues = Property::where('status', 0)->latest()->paginate(5);
-    
+
         return view('property.pending', compact('pendingPropertyValues'));
     }
     public function PropertyRejectindex()
     {
         $rejectPropertyValues = Property::where('status', 2)->latest()->paginate(5);
-    
+
         return view('property.reject', compact('rejectPropertyValues'));
     }
 
@@ -156,6 +175,4 @@ class PropertyController extends Controller
 
         return redirect()->back()->with('message', 'Property status updated successfully.');
     }
-
-  
 }

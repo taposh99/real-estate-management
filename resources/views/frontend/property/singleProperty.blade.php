@@ -151,6 +151,20 @@
                       <span>{{ $property->garage }}</span>
                     </li>
                     @endif
+                
+                    @if($property->owner_name)
+                    <li class="d-flex justify-content-between">
+                      <strong>Property Owner Name:</strong>
+                      <span>{{ $property->owner_name }}</span>
+                    </li>
+                    @endif
+
+                    @if($property->owner_phone)
+                    <li class="d-flex justify-content-between">
+                      <strong>Owner Number:</strong>
+                      <span>{{ $property->owner_phone }}</span>
+                    </li>
+                    @endif
                   </ul>
 
                 </div>
@@ -184,12 +198,10 @@
                   <li>Balcony</li>
                   <li>Outdoor Kitchen</li>
                   <li>Cable Tv</li>
-                  <li>Deck</li>
-                  <li>Tennis Courts</li>
                   <li>Internet</li>
                   <li>Parking</li>
                   <li>Sun Room</li>
-                  <li>Concrete Flooring</li>
+                  <li>playground</li>
                 </ul>
               </div>
             </div>
