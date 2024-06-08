@@ -83,6 +83,8 @@ Route::post('/property-store', [PropertyController::class, 'store'])->name('prop
 Route::get('/property/edit/{id}', [PropertyController::class, 'edit'])->name('property.edit');
 Route::post('/property/update', [PropertyController::class, 'update'])->name('property.update');
 Route::delete('/property/delete', [PropertyController::class, 'destroy'])->name('property.delete');
+Route::get('/properties/{id}', [PropertyController::class, 'show']);
+
 
 
 /**
