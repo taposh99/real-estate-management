@@ -1,7 +1,9 @@
 @extends('frontend.master')
 
 @section('body')
-<div class="intro intro-carousel swiper position-relative">
+<div class="intro intro-carousel swiper position-relative" style="
+    margin-top: 85px;
+">
     <div class="swiper-wrapper">
         @forelse ($allBanner as $data)
         @php
@@ -9,8 +11,8 @@
         $firstWord = $titleWords[0];
         $remainingWords = isset($titleWords[1]) ? $titleWords[1] : '';
         @endphp
-        <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url({{ asset('images/banner/' . $data->image) }})">
-            <div class="overlay overlay-a"></div>
+            <div class="overlay overlay-a"></div>        <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url({{ asset('images/banner/' . $data->image) }});height:560px;">
+
             <div class="intro-content display-table">
                 <div class="table-cell">
                     <div class="container">

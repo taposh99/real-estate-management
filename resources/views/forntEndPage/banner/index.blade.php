@@ -118,8 +118,8 @@
                                     @endif
                                 </div>
                                 <label class="form-label">Banner Title</label>
-                                <input type="text" class="form-control" name="title" id="categoryName" required
-                                    placeholder="Title">
+                                <input type="text" class="form-control" name="title" id="categoryName"
+                                    placeholder="Homes Tailored for You">
 
                                 <label class="form-label">Image</label>
                                 <input type="file" class="form-control" name="image" accept="image/jpeg,image/jpg">
