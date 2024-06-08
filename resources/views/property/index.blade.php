@@ -106,11 +106,11 @@
                                
                                 
                                 <div class="col-md-6">
-                                    <label class="form-label">Property Title</label>
-                                    <input type="text" class="form-control" name="title" required placeholder="Sani Houses">
+                                    <label class="form-label">Property Title <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="title" required placeholder="Sani Houses" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">Property Type</label>
+                                    <label class="form-label">Property Type <span class="text-danger">*</span></label>
                                     <select class="form-control" name="property_type_id" required>
                                         <option value="">Select One</option>
                                         @foreach ($propertyTypes as $data)
@@ -119,7 +119,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">City</label>
+                                    <label class="form-label">City <span class="text-danger">*</span></label>
                                     <select class="form-control" name="city_id" required>
                                         <option value="">Select One</option>
                                         @foreach ($citys as $data)
@@ -128,7 +128,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">Location</label>
+                                    <label class="form-label">Location <span class="text-danger">*</span></label>
                                     <select class="form-control" name="location_id" required>
                                         <option value="">Select One</option>
                                         @foreach ($locations as $data)
@@ -137,7 +137,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">Property Purpose</label>
+                                    <label class="form-label">Property Purpose <span class="text-danger">*</span></label>
                                     <select class="form-control" name="property_purpose" required>
                                         <option value="">Select One</option>
                                         <option value="For sale">For sale</option>
@@ -146,70 +146,69 @@
                                     </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">Property Video Link</label>
+                                    <label class="form-label">Property Youtube Link</label>
                                     <input type="url" class="form-control" name="video_link" placeholder="https://www.youtube.com/embed/example">
                                 </div>
 
                                 <div class="col-md-6">
                                     <label class="form-label">Land Area</label>
-                                    <input type="text" class="form-control" name="land_area" required placeholder="350 Katha">
+                                    <input type="text" class="form-control" name="land_area"  placeholder="350 Katha">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Appartment Size</label>
-                                    <input type="text" class="form-control" name="appartment_size" required placeholder="500 Sft">
+                                    <input type="text" class="form-control" name="appartment_size"  placeholder="500 Sft">
                                 </div>
 
                                 <div class="col-md-6">
                                     <label class="form-label">Bed Room</label>
-                                    <input type="number" class="form-control" name="bed_room" required placeholder="3">
+                                    <input type="number" class="form-control" name="bed_room"  placeholder="3">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Bath Room</label>
-                                    <input type="number" class="form-control" name="bath_room" required placeholder="3">
+                                    <input type="number" class="form-control" name="bath_room"  placeholder="3">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Drawing Room</label>
-                                    <input type="text" class="form-control" name="drawing_room" required placeholder="1">
+                                    <input type="number" class="form-control" name="drawing_room"  placeholder="1">
                                 </div>
 
                                 <div class="col-md-6">
                                     <label class="form-label">Dining Room</label>
-                                    <input type="number" class="form-control" name="dining_room" required placeholder="1">
+                                    <input type="number" class="form-control" name="dining_room"  placeholder="1">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Garage</label>
-                                    <input type="number" class="form-control" name="garage" required placeholder="1">
+                                    <input type="number" class="form-control" name="garage"  placeholder="1">
                                 </div>
 
                                 <div class="col-md-6">
                                     <label class="form-label">properties Description</label>
-                                    <textarea class="form-control" name="description" required placeholder="Enter Property Description"></textarea>
+                                    <textarea class="form-control" name="description"  placeholder="Enter Property Description"></textarea>
                                 </div>
                                
                                 <div class="col-md-6">
                                     <label class="form-label">Image</label>
                                     <input type="file" class="form-control" name="image" accept="image/jpeg,image/jpg">
-                                    <small class="form-text text-muted">Supported files: jpeg, jpg. Image will be resized into 992x740px.</small>
                                 </div>
 
                                 <div class="col-md-6">
                                     <label class="form-label">Price</label>
-                                    <input type="number" class="form-control" name="price" required placeholder="10000">
+                                    <input type="number" class="form-control" name="price"  placeholder="10000">
                                 </div>
                                 <div class="col-md-12 mt-4">
                                     <h5>Property Owner Information</h5>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" name="owner_name" required placeholder="Enter Full Name">
+                                    <input type="text" class="form-control" name="owner_name"  placeholder="Enter Full Name">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Phone</label>
-                                    <input type="text" class="form-control" name="owner_phone" required placeholder="Enter Phone">
+                                    <input type="text" class="form-control" name="owner_phone"  placeholder="Enter Phone">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Email</label>
-                                    <input type="email" class="form-control" name="owner_email" required placeholder="Enter Email Address">
+                                    <input type="email" class="form-control" name="owner_email"  placeholder="Enter Email Address">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Facebook URL</label>
