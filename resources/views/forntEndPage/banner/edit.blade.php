@@ -37,8 +37,8 @@
                                 @endif
                 
                                 <div class="form-group mb-3">
-                                    <label for="title" class="form-label">Title <span class="text-danger">*</span></label>
-                                    <input type="text" name="title" id="title" class="form-control" required value="{{ $editBannerValues->title }}">
+                                    <label for="title" class="form-label">Title</label>
+                                    <input type="text" name="title" id="title" class="form-control" placeholder="Homes Tailored for You" value="{{ $editBannerValues->title }}">
                                 </div>
                 
                                 <div class="form-group mb-3">
