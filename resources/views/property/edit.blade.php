@@ -128,11 +128,11 @@
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Phone</label>
-                                <input type="text" class="form-control" name="owner_phone" required placeholder="Enter Phone" value="{{ $editPropertyValues->owner_phone }}">
+                                <input type="text" class="form-control" name="owner_phone"  placeholder="Enter Phone" value="{{ $editPropertyValues->owner_phone }}">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Email</label>
-                                <input type="email" class="form-control" name="owner_email" required placeholder="Enter Email Address" value="{{ $editPropertyValues->owner_email }}">
+                                <input type="email" class="form-control" name="owner_email"  placeholder="Enter Email Address" value="{{ $editPropertyValues->owner_email }}">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Facebook URL</label>
