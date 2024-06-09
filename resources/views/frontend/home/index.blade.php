@@ -9,7 +9,8 @@
         $firstWord = $titleWords[0];
         $remainingWords = isset($titleWords[1]) ? $titleWords[1] : '';
         @endphp
-            <div class="overlay overlay-a"></div>        <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url({{ asset('images/banner/' . $data->image) }});>
+            <div class="overlay overlay-a"></div>      
+              <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url({{ asset('images/banner/' . $data->image) }});">
 
             <div class="intro-content display-table">
                 <div class="table-cell">
