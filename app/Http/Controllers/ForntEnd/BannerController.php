@@ -19,7 +19,7 @@ class BannerController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => 'required|string',
+            'title' => 'nullable|string',
             'image' => 'required|image',
         ]);
 
@@ -54,7 +54,7 @@ class BannerController extends Controller
     {
         // Validate incoming request
         $validated = $request->validate([
-            'title' => 'required|string',
+            'title' => 'nullable|string',
             'image' => 'nullable|image',
         ]);
 
