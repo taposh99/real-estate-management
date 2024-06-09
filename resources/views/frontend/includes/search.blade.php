@@ -33,9 +33,12 @@ $propertyLocations = Location::all();
                         <label class="pb-2" for="city">City</label>
                         <select class="form-control form-select form-control-a" id="city" name="city">
                             <option value="All City" {{ request('city') == 'All City' ? 'selected' : '' }}>All City</option>
-                            <option value="Alabama" {{ request('city') == 'Alabama' ? 'selected' : '' }}>Alabama</option>
+                            <option value="Mymensingh" {{ request('city') == 'Mymensingh' ? 'selected' : '' }}>Mymensingh</option>
                             <option value="Dhaka" {{ request('city') == 'Dhaka' ? 'selected' : '' }}>Dhaka</option>
                             <option value="Khulna" {{ request('city') == 'Khulna' ? 'selected' : '' }}>Khulna</option>
+                            <option value="Sylhet" {{ request('city') == 'Sylhet' ? 'selected' : '' }}>Sylhet</option>
+                            <option value="Rajshahi" {{ request('city') == 'Rajshahi' ? 'selected' : '' }}>Rajshahi</option>
+                            <option value="Chittagong" {{ request('city') == 'Chittagong' ? 'selected' : '' }}>Chittagong</option>
                         </select>
                     </div>
                 </div>
