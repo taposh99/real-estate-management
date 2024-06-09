@@ -12,7 +12,7 @@ class ContactUsController extends Controller
     public function index()
     {
         $allContact = ContactUs::latest()->paginate(10);
-        return view('ForntEndPage.contact.index', compact('allContact'));
+        return view('forntEndPage.contact.index', compact('allContact'));
     }
 
     public function store(Request $request)

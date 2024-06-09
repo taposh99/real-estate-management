@@ -12,7 +12,7 @@ class BannerController extends Controller
     public function index()
     {
         $allBanner = Banner::latest()->paginate(10);
-        return view('forntEndPage.banner.index', compact('allBanner'));
+        return view('forntEndPage.banner.index',compact('allBanner'));
     }
 
 
