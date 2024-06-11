@@ -5,7 +5,7 @@
             <span></span>
             <span></span>
         </button>
-        <a class="navbar-brand text-brand" href="{{route('home')}}">Real<span class="color-b">Estate</span></a>
+        <a class="navbar-brand text-brand" href="{{route('home')}}">Bankers<span class="color-b">Housing</span></a>
 
         <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
             <ul class="navbar-nav">
