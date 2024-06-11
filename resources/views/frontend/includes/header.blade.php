@@ -5,48 +5,28 @@
             <span></span>
             <span></span>
         </button>
-        <a class="navbar-brand text-brand" href="{{route('home')}}">Real<span class="color-b">Estate</span></a>
+        <a class="navbar-brand text-brand" href="{{route('home')}}">Bankers<span class="color-b">Housing</span></a>
 
         <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
             <ul class="navbar-nav">
-
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{route('home')}}">Home</a>
+                    <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
                 </li>
-
-
                 <li class="nav-item">
-                    <a class="nav-link " href="{{route('property.page')}}">Property</a>
+                    <a class="nav-link {{ request()->routeIs('property.page') ? 'active' : '' }}" href="{{ route('property.page') }}">Property</a>
                 </li>
-
-                {{-- <li class="nav-item">
-                    <a class="nav-link " href="blog-grid.html">Blog</a>
-                </li> --}}
-               
-
-                {{-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item " href="property-single.html">Property Single</a>
-                        <a class="dropdown-item " href="blog-single.html">Blog Single</a>
-                        <a class="dropdown-item " href="agents-grid.html">Agents Grid</a>
-                        <a class="dropdown-item " href="agent-single.html">Agent Single</a>
-                    </div>
-                </li> --}}
                 <li class="nav-item">
-                    <a class="nav-link " href="{{route('contact.page')}}">Contact</a>
+                    <a class="nav-link {{ request()->routeIs('contact.page') ? 'active' : '' }}" href="{{ route('contact.page') }}">Contact</a>
                 </li>
-
-                
                 <li class="nav-item">
-                    <a class="nav-link " href="{{route('about.page')}}">About Us</a>
+                    <a class="nav-link {{ request()->routeIs('about.page') ? 'active' : '' }}" href="{{ route('about.page') }}">About Us</a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link " href="{{route('login')}}">Login</a>
+                    <a class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}" href="{{ route('login') }}">Login</a>
                 </li>
             </ul>
         </div>
+        
 
         <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
             <i class="bi bi-search"></i>
