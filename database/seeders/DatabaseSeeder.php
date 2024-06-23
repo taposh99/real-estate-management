@@ -14,17 +14,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
 
         DB::table('users')->insert([
             'name' => 'sani',
             'email' => 'admin@gmail.com',
             'password' => Hash::make('12345678'),
+        ]);
+        // Insert all divisions into the 'cities' table
+        DB::table('cities')->insert([
+            ['name' => 'Barisal'],
+            ['name' => 'Chittagong'],
+            ['name' => 'Dhaka'],
+            ['name' => 'Khulna'],
+            ['name' => 'Mymensingh'],
+            ['name' => 'Rajshahi'],
+            ['name' => 'Rangpur'],
+            ['name' => 'Sylhet'],
         ]);
     }
 }
