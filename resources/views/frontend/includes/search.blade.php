@@ -39,6 +39,8 @@ $propertyLocations = Location::all();
                             <option value="Sylhet" {{ request('city') == 'Sylhet' ? 'selected' : '' }}>Sylhet</option>
                             <option value="Rajshahi" {{ request('city') == 'Rajshahi' ? 'selected' : '' }}>Rajshahi</option>
                             <option value="Chittagong" {{ request('city') == 'Chittagong' ? 'selected' : '' }}>Chittagong</option>
+                            <option value="Barisal" {{ request('city') == 'Barisal' ? 'selected' : '' }}>Barisal</option>
+                            <option value="Rangpur" {{ request('city') == 'Rangpur' ? 'selected' : '' }}>Rangpur</option>
                         </select>
                     </div>
                 </div>
